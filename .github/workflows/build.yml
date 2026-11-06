@@ -27,7 +27,7 @@ jobs:
       - name: swift test
         run: |
           set -o pipefail
-          swift test --package-path Packages/TunaCore 2>&1 | tail -150
+          swift test --package-path Packages/TunaCore 2>&1 | tee coretests.log | grep -E "error:|failed|Executed .* tests" | tail -60
 
   macos:
     name: macOS app (Xcode 26)
