@@ -19,6 +19,9 @@ jobs:
     name: TunaCore tests (Linux)
     runs-on: ubuntu-latest
     container: swift:6.2-noble
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - name: swift test
@@ -137,7 +140,7 @@ jobs:
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-snapshots
 
       - name: Package DMG
-        run: scripts/make-dmg.sh "${{ steps.app.outputs.path }}" "dist/TunaTV-macOS.dmg"
+        run: bash scripts/make-dmg.sh "${{ steps.app.outputs.path }}" "dist/TunaTV-macOS.dmg"
 
       - name: Upload DMG
         uses: actions/upload-artifact@v4
