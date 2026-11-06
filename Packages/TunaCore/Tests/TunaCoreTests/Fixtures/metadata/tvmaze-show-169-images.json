@@ -1,0 +1,8 @@
+[
+  { "id": 4489, "type": "background", "main": false, "resolutions": { "original": { "url": "https://static.tvmaze.com/uploads/images/original_untouched/2/4489.jpg", "width": 1920, "height": 1080 } } },
+  { "id": 1253519, "type": "poster", "main": true, "resolutions": { "original": { "url": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg", "width": 680, "height": 1000 }, "medium": { "url": "https://static.tvmaze.com/uploads/images/medium_portrait/501/1253519.jpg", "width": 210, "height": 295 } } },
+  { "id": 4490, "type": "background", "main": true, "resolutions": { "original": { "url": "https://static.tvmaze.com/uploads/images/original_untouched/2/4490.jpg", "width": 1920, "height": 1080 } } },
+  { "id": 12345, "type": "banner", "main": true, "resolutions": { "original": { "url": "https://static.tvmaze.com/uploads/images/original_untouched/0/12345.jpg", "width": 758, "height": 140 } } },
+  { "id": 67890, "type": "typography", "main": true, "resolutions": { "original": { "url": "https://static.tvmaze.com/uploads/images/original_untouched/0/67890.png", "width": 1000, "height": 400 } } },
+  { "id": 99999, "type": null, "main": false, "resolutions": {} }
+]

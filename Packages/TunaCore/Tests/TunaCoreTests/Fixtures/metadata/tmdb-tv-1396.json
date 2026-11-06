@@ -1,0 +1,151 @@
+{
+  "adult": false,
+  "backdrop_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+  "created_by": [
+    { "id": 66633, "credit_id": "52542286760ee31328001a7b", "name": "Vince Gilligan", "original_name": "Vince Gilligan", "gender": 2, "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg" }
+  ],
+  "episode_run_time": [],
+  "first_air_date": "2008-01-20",
+  "genres": [
+    { "id": 18, "name": "Drama" },
+    { "id": 80, "name": "Crime" }
+  ],
+  "homepage": "https://www.sonypictures.com/tv/breakingbad",
+  "id": 1396,
+  "in_production": false,
+  "languages": ["en"],
+  "last_air_date": "2013-09-29",
+  "last_episode_to_air": {
+    "id": 62161,
+    "name": "Felina",
+    "overview": "All bad things must come to an end.",
+    "vote_average": 9.2,
+    "vote_count": 210,
+    "air_date": "2013-09-29",
+    "episode_number": 16,
+    "episode_type": "finale",
+    "production_code": "",
+    "runtime": 56,
+    "season_number": 5,
+    "show_id": 1396,
+    "still_path": "/pA0YwyhvdDXP3BEGL2grrIhq8aM.jpg"
+  },
+  "name": "Breaking Bad",
+  "next_episode_to_air": null,
+  "networks": [
+    { "id": 174, "logo_path": "/alqLicR1ZMHMaZGP3xRQxn9sq7p.png", "name": "AMC", "origin_country": "US" }
+  ],
+  "number_of_episodes": 62,
+  "number_of_seasons": 5,
+  "origin_country": ["US"],
+  "original_language": "en",
+  "original_name": "Breaking Bad",
+  "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+  "popularity": 288.4,
+  "poster_path": "/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+  "production_companies": [
+    { "id": 11073, "logo_path": "/aCbASRcI1MI7DXjPbSW9Fcv9uGR.png", "name": "Sony Pictures Television Studios", "origin_country": "US" },
+    { "id": 33742, "logo_path": "/ggABr2SJ0aXoEbgSbAvYzWtF3ab.png", "name": "High Bridge Productions", "origin_country": "US" },
+    { "id": 2605, "logo_path": null, "name": "Gran Via Productions", "origin_country": "US" }
+  ],
+  "production_countries": [
+    { "iso_3166_1": "US", "name": "United States of America" }
+  ],
+  "seasons": [
+    { "air_date": "2009-02-17", "episode_count": 9, "id": 3577, "name": "Specials", "overview": "", "poster_path": "/40dT79mDEZwXkQiZNBgSaydQFDP.jpg", "season_number": 0, "vote_average": 0.0 },
+    { "air_date": "2008-01-20", "episode_count": 7, "id": 3572, "name": "Season 1", "overview": "", "poster_path": "/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg", "season_number": 1, "vote_average": 8.4 }
+  ],
+  "spoken_languages": [
+    { "english_name": "English", "iso_639_1": "en", "name": "English" },
+    { "english_name": "Spanish", "iso_639_1": "es", "name": "Español" }
+  ],
+  "status": "Ended",
+  "tagline": "Change the equation.",
+  "type": "Scripted",
+  "vote_average": 8.926,
+  "vote_count": 15102,
+  "aggregate_credits": {
+    "cast": [
+      { "adult": false, "gender": 2, "id": 84497, "known_for_department": "Acting", "name": "Aaron Paul", "original_name": "Aaron Paul", "popularity": 26.1, "profile_path": "/8Ac9uuoYwZoYVAIJfRLzzLsGGJn.jpg", "roles": [ { "credit_id": "52542282760ee313280017f9", "character": "Jesse Pinkman", "episode_count": 62 } ], "total_episode_count": 62, "order": 1 },
+      { "adult": false, "gender": 2, "id": 17419, "known_for_department": "Acting", "name": "Bryan Cranston", "original_name": "Bryan Cranston", "popularity": 40.3, "profile_path": "/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg", "roles": [ { "credit_id": "52542282760ee313280017f1", "character": "Walter White", "episode_count": 62 } ], "total_episode_count": 62, "order": 0 },
+      { "adult": false, "gender": 1, "id": 134531, "known_for_department": "Acting", "name": "Anna Gunn", "original_name": "Anna Gunn", "popularity": 11.4, "profile_path": "/adppyeu1a4REN3khtgmXusrapFi.jpg", "roles": [ { "credit_id": "52542282760ee313280017e9", "character": "Skyler White", "episode_count": 62 } ], "total_episode_count": 62, "order": 2 },
+      { "adult": false, "gender": 2, "id": 209674, "known_for_department": "Acting", "name": "RJ Mitte", "original_name": "RJ Mitte", "popularity": 5.0, "profile_path": "/dVaMbtmHjSSyAOtVHPbBEgcd3ah.jpg", "roles": [ { "credit_id": "52542282760ee313280017e1", "character": "Walter White Jr.", "episode_count": 62 } ], "total_episode_count": 62, "order": 3 },
+      { "adult": false, "gender": 2, "id": 14329, "known_for_department": "Acting", "name": "Dean Norris", "original_name": "Dean Norris", "popularity": 9.2, "profile_path": "/ghaJ2kCNhyZQ1ty5W1mf5wfpTMS.jpg", "roles": [ { "credit_id": "52542283760ee31328001845", "character": "Hank Schrader", "episode_count": 62 } ], "total_episode_count": 62, "order": 4 }
+    ],
+    "crew": [
+      { "adult": false, "gender": 2, "id": 66633, "known_for_department": "Writing", "name": "Vince Gilligan", "original_name": "Vince Gilligan", "popularity": 6.2, "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg", "jobs": [ { "credit_id": "5254228e760ee31328001f7f", "job": "Executive Producer", "episode_count": 62 } ], "department": "Production", "total_episode_count": 62 },
+      { "adult": false, "gender": 2, "id": 66633, "known_for_department": "Writing", "name": "Vince Gilligan", "original_name": "Vince Gilligan", "popularity": 6.2, "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg", "jobs": [ { "credit_id": "52542290760ee31328002170", "job": "Writer", "episode_count": 13 }, { "credit_id": "5254228e760ee31328001f8b", "job": "Director", "episode_count": 5 } ], "department": "Writing", "total_episode_count": 18 },
+      { "adult": false, "gender": 1, "id": 29924, "known_for_department": "Directing", "name": "Michelle MacLaren", "original_name": "Michelle MacLaren", "popularity": 2.9, "profile_path": "/uQIdHmrFzxXwqXOuEFSdN2OuuLi.jpg", "jobs": [ { "credit_id": "5254228e760ee31328001fd1", "job": "Director", "episode_count": 11 } ], "department": "Directing", "total_episode_count": 11 },
+      { "adult": false, "gender": 2, "id": 1223192, "known_for_department": "Sound", "name": "Dave Porter", "original_name": "Dave Porter", "popularity": 1.2, "profile_path": null, "jobs": [ { "credit_id": "52542291760ee313280021fe", "job": "Original Music Composer", "episode_count": 62 } ], "department": "Sound", "total_episode_count": 62 },
+      { "adult": false, "gender": 2, "id": 1222727, "known_for_department": "Crew", "name": "Some Driver", "original_name": "Some Driver", "popularity": 0.3, "profile_path": null, "jobs": [ { "credit_id": "52542291760ee313280021ff", "job": "Driver", "episode_count": 4 } ], "department": "Crew", "total_episode_count": 4 }
+    ],
+    "id": 1396
+  },
+  "credits": {
+    "cast": [
+      { "adult": false, "gender": 2, "id": 17419, "known_for_department": "Acting", "name": "Bryan Cranston", "original_name": "Bryan Cranston", "popularity": 40.3, "profile_path": "/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg", "character": "Walter White", "credit_id": "52542282760ee313280017f1", "order": 0 }
+    ],
+    "crew": [
+      { "adult": false, "gender": 2, "id": 66633, "known_for_department": "Writing", "name": "Vince Gilligan", "original_name": "Vince Gilligan", "popularity": 6.2, "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg", "credit_id": "5254228e760ee31328001f7f", "department": "Production", "job": "Executive Producer" }
+    ],
+    "id": 1396
+  },
+  "videos": {
+    "results": [
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Breaking Bad - Season 5 Trailer", "key": "HhesaQXLuRY", "site": "YouTube", "size": 1080, "type": "Trailer", "official": true, "published_at": "2012-07-03T15:00:00.000Z", "id": "5759db2fc3a3683e7c003df7" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Opening Credits", "key": "Wle5qn2tVjA", "site": "YouTube", "size": 720, "type": "Opening Credits", "official": false, "published_at": "2011-09-01T00:00:00.000Z", "id": "5759db2fc3a3683e7c003df8" }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      { "aspect_ratio": 1.778, "height": 1080, "iso_639_1": null, "file_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg", "vote_average": 5.8, "vote_count": 20, "width": 1920 }
+    ],
+    "logos": [
+      { "aspect_ratio": 2.03, "height": 493, "iso_639_1": "en", "file_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.png", "vote_average": 5.5, "vote_count": 8, "width": 1000 }
+    ],
+    "posters": []
+  },
+  "content_ratings": {
+    "results": [
+      { "descriptors": [], "iso_3166_1": "DE", "rating": "16" },
+      { "descriptors": [], "iso_3166_1": "US", "rating": "TV-MA" },
+      { "descriptors": [], "iso_3166_1": "BR", "rating": "18" }
+    ]
+  },
+  "keywords": {
+    "results": [
+      { "name": "drug dealer", "id": 2231 },
+      { "name": "high school teacher", "id": 6996 },
+      { "name": "cancer", "id": 9799 },
+      { "name": "methamphetamine", "id": 15483 }
+    ]
+  },
+  "recommendations": {
+    "page": 1,
+    "results": [
+      { "adult": false, "id": 60059, "name": "Better Call Saul", "media_type": "tv" },
+      { "adult": false, "id": 1398, "name": "The Sopranos", "media_type": "tv" }
+    ],
+    "total_pages": 1,
+    "total_results": 2
+  },
+  "similar": {
+    "page": 1,
+    "results": [
+      { "adult": false, "id": 46648, "name": "True Detective" }
+    ],
+    "total_pages": 1,
+    "total_results": 1
+  },
+  "external_ids": {
+    "imdb_id": "tt0903747",
+    "freebase_mid": "/m/03d34x8",
+    "freebase_id": "/en/breaking_bad",
+    "tvdb_id": 81189,
+    "tvrage_id": 18164,
+    "wikidata_id": "Q1079",
+    "facebook_id": "BreakingBad",
+    "instagram_id": "breakingbad",
+    "twitter_id": "BreakingBad"
+  }
+}
