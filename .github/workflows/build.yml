@@ -173,3 +173,29 @@ jobs:
             `xattr -dr com.apple.quarantine "/Applications/Tuna TV.app"`
 
             Requires macOS 15+ on Apple Silicon. Bring your own Xtream Codes or M3U subscription, or try the built-in demo.
+
+  tvos-xcode27:
+    name: Apple TV app (Xcode 27, matches beta toolchains)
+    runs-on: xcode-27
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: |
+          XC="$(ls -d /Applications/Xcode_27*.app | sort -V | tail -1)"
+          sudo xcode-select -s "$XC"; xcodebuild -version
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate --spec project.yml
+      - name: Build tvOS app (unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild build -project TunaTV.xcodeproj -scheme TunaTV-tvOS -configuration Release \
+            -destination 'generic/platform=tvOS' -derivedDataPath build/tv27 \
+            -skipPackagePluginValidation -skipMacroValidation \
+            CODE_SIGNING_ALLOWED=NO COMPILER_INDEX_STORE_ENABLE=NO \
+            2>&1 | tee tv27.log | xcbeautify --quiet --renderer github-actions
+      - name: Compiler errors (if any)
+        if: failure()
+        run: grep -E "(error|fatal error):" tv27.log | sort -u | head -300 || true
