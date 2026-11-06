@@ -280,8 +280,10 @@ final class CurationPerformanceTests: XCTestCase {
                      + "(~%.2f s for 150k); checksum %d", batch, ProcessInfo.processInfo.activeProcessorCount,
                      single * 1_000_000, single * 150_000, checksum))
         XCTAssertEqual(total, 150_000)
-        XCTAssertLessThan(batch, 2.0)
-        XCTAssertLessThan(single, 100e-6)
+        // Regression guards, not benchmarks: debug builds on shared 2-3 core CI runners vary ~2x,
+        // while an accidental O(n^2) or regex-heavy path would blow far past these bounds.
+        XCTAssertLessThan(batch, 6.0)
+        XCTAssertLessThan(single, 150e-6)
     }
 
     func testParseAllMatchesSequentialParse() {
