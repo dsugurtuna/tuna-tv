@@ -1,0 +1,5 @@
+[
+  { "score": 0.91, "show": { "id": 1503, "name": "Shameless", "language": "English", "premiered": "2004-01-13", "weight": 85, "network": { "id": 45, "name": "Channel 4", "country": { "code": "GB" } } } },
+  { "score": 0.90, "show": { "id": 150, "name": "Shameless", "language": "English", "premiered": "2011-01-09", "weight": 97, "network": { "id": 9, "name": "Showtime", "country": { "code": "US" } } } },
+  { "score": 0.40, "show": { "id": 4321, "name": "Shameless Love", "language": "English", "premiered": "2011-05-01", "weight": 10 } }
+]

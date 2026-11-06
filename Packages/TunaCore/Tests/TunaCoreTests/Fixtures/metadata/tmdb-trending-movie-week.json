@@ -1,0 +1,11 @@
+{
+  "page": 1,
+  "results": [
+    { "adult": false, "backdrop_path": "/1XDDXPXGiI8id7MrUxK36ke7gkX.jpg", "id": 1022789, "title": "Inside Out 2", "original_language": "en", "original_title": "Inside Out 2", "media_type": "movie", "genre_ids": [16, 10751, 12, 35], "popularity": 4425.9, "release_date": "2024-06-11", "video": false, "vote_average": 7.7, "vote_count": 1820 },
+    { "adult": false, "backdrop_path": "/ncEsesgOJDNrTUED89hYbA117wo.jpg", "id": 603, "title": "The Matrix", "original_language": "en", "original_title": "The Matrix", "media_type": "movie", "genre_ids": [28, 878], "popularity": 81.6, "release_date": "1999-03-31", "video": false, "vote_average": 8.2, "vote_count": 26412 },
+    { "adult": false, "backdrop_path": "/fqv8v6AycXKsivp1T5yKtLbGXce.jpg", "id": 533535, "title": "Deadpool & Wolverine", "original_language": "en", "original_title": "Deadpool & Wolverine", "media_type": "movie", "genre_ids": [28, 35, 878], "popularity": 3611.3, "release_date": "2024-07-24", "video": false, "vote_average": 7.8, "vote_count": 2650 },
+    { "adult": false, "id": 603, "title": "The Matrix", "media_type": "movie", "popularity": 81.6 }
+  ],
+  "total_pages": 500,
+  "total_results": 10000
+}

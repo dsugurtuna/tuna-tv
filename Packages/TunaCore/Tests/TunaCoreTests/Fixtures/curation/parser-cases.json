@@ -1,0 +1,2585 @@
+[
+ {
+  "input": "EN| The Matrix (1999) 4K",
+  "kind": "movie",
+  "expected": {
+   "key": "matrix",
+   "languages": [
+    "en"
+   ],
+   "quality": "uhd",
+   "title": "The Matrix",
+   "year": 1999
+  }
+ },
+ {
+  "input": "The Matrix 1999 FHD",
+  "kind": "movie",
+  "expected": {
+   "key": "matrix",
+   "quality": "fhd",
+   "title": "The Matrix",
+   "year": 1999
+  }
+ },
+ {
+  "input": "|TR| The Matrix (1999) Türkçe Dublaj",
+  "kind": "movie",
+  "expected": {
+   "audio": "dubbed",
+   "countries": [
+    "TR"
+   ],
+   "key": "matrix",
+   "languages": [
+    "tr"
+   ],
+   "title": "The Matrix",
+   "year": 1999
+  }
+ },
+ {
+  "input": "The Matrix 1999 Türkçe Dublaj",
+  "kind": "movie",
+  "expected": {
+   "audio": "dubbed",
+   "key": "matrix",
+   "languages": [
+    "tr"
+   ],
+   "title": "The Matrix",
+   "year": 1999
+  }
+ },
+ {
+  "input": "|EN| Avengers: Endgame (2019) ⁴ᴷ",
+  "kind": "movie",
+  "expected": {
+   "key": "avengers endgame",
+   "languages": [
+    "en"
+   ],
+   "quality": "uhd",
+   "title": "Avengers: Endgame",
+   "year": 2019
+  }
+ },
+ {
+  "input": "The Lord of the Rings: The Two Towers (2002) 4K HDR10 HEVC",
+  "kind": "movie",
+  "expected": {
+   "codec": "hevc",
+   "hdr": "hdr10",
+   "key": "lord of the rings the two towers",
+   "quality": "uhd",
+   "title": "The Lord of the Rings: The Two Towers",
+   "year": 2002
+  }
+ },
+ {
+  "input": "[DE] Das Boot (1981) BluRay 1080p",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "key": "boot",
+   "languages": [
+    "de"
+   ],
+   "quality": "fhd",
+   "source": "bluray",
+   "title": "Das Boot",
+   "year": 1981
+  }
+ },
+ {
+  "input": "Dune Part Two (2024) HDCAM",
+  "kind": "movie",
+  "expected": {
+   "key": "dune part 2",
+   "source": "cam",
+   "title": "Dune Part Two",
+   "year": 2024
+  }
+ },
+ {
+  "input": "Oppenheimer (2023) TS",
+  "kind": "movie",
+  "expected": {
+   "key": "oppenheimer",
+   "source": "telesync",
+   "title": "Oppenheimer",
+   "year": 2023
+  }
+ },
+ {
+  "input": "Barbie 2023 HDTS",
+  "kind": "movie",
+  "expected": {
+   "key": "barbie",
+   "source": "telesync",
+   "title": "Barbie",
+   "year": 2023
+  }
+ },
+ {
+  "input": "Wonka (2023) SCREENER",
+  "kind": "movie",
+  "expected": {
+   "key": "wonka",
+   "source": "screener",
+   "title": "Wonka",
+   "year": 2023
+  }
+ },
+ {
+  "input": "Spider-Man: No Way Home (2021) WEB-DL 1080p",
+  "kind": "movie",
+  "expected": {
+   "key": "spider man no way home",
+   "quality": "fhd",
+   "source": "webdl",
+   "title": "Spider-Man: No Way Home",
+   "year": 2021
+  }
+ },
+ {
+  "input": "Mission: Impossible - Dead Reckoning Part One (2023)",
+  "kind": "movie",
+  "expected": {
+   "key": "mission impossible dead reckoning part 1",
+   "title": "Mission: Impossible - Dead Reckoning Part One",
+   "year": 2023
+  }
+ },
+ {
+  "input": "Fast & Furious 9 (2021)",
+  "kind": "movie",
+  "expected": {
+   "key": "fast and furious 9",
+   "title": "Fast & Furious 9",
+   "year": 2021
+  }
+ },
+ {
+  "input": "Rocky II (1979)",
+  "kind": "movie",
+  "expected": {
+   "key": "rocky 2",
+   "title": "Rocky II",
+   "year": 1979
+  }
+ },
+ {
+  "input": "Rocky VI (2006)",
+  "kind": "movie",
+  "expected": {
+   "key": "rocky 6",
+   "title": "Rocky VI",
+   "year": 2006
+  }
+ },
+ {
+  "input": "Star Wars: Episode IV - A New Hope (1977)",
+  "kind": "movie",
+  "expected": {
+   "key": "star wars episode 4 a new hope",
+   "title": "Star Wars: Episode IV - A New Hope",
+   "year": 1977
+  }
+ },
+ {
+  "input": "X-Men (2000)",
+  "kind": "movie",
+  "expected": {
+   "key": "x men",
+   "title": "X-Men",
+   "year": 2000
+  }
+ },
+ {
+  "input": "300 (2006)",
+  "kind": "movie",
+  "expected": {
+   "key": "300",
+   "title": "300",
+   "year": 2006
+  }
+ },
+ {
+  "input": "1917 (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "1917",
+   "title": "1917",
+   "year": 2019
+  }
+ },
+ {
+  "input": "EN| 1917 (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "1917",
+   "languages": [
+    "en"
+   ],
+   "title": "1917",
+   "year": 2019
+  }
+ },
+ {
+  "input": "EN| 2012",
+  "kind": "movie",
+  "expected": {
+   "key": "2012",
+   "languages": [
+    "en"
+   ],
+   "title": "2012"
+  }
+ },
+ {
+  "input": "2012 (2009)",
+  "kind": "movie",
+  "expected": {
+   "key": "2012",
+   "title": "2012",
+   "year": 2009
+  }
+ },
+ {
+  "input": "(500) Days of Summer (2009)",
+  "kind": "movie",
+  "expected": {
+   "key": "500 days of summer",
+   "title": "(500) Days of Summer",
+   "year": 2009
+  }
+ },
+ {
+  "input": "Se7en (1995)",
+  "kind": "movie",
+  "expected": {
+   "key": "se7en",
+   "title": "Se7en",
+   "year": 1995
+  }
+ },
+ {
+  "input": "M3GAN (2022)",
+  "kind": "movie",
+  "expected": {
+   "key": "m3gan",
+   "title": "M3GAN",
+   "year": 2022
+  }
+ },
+ {
+  "input": "Matrix, The (1999)",
+  "kind": "movie",
+  "expected": {
+   "key": "matrix",
+   "title": "Matrix, The",
+   "year": 1999
+  }
+ },
+ {
+  "input": "Amélie (2001) VOSTFR",
+  "kind": "movie",
+  "expected": {
+   "audio": "subtitled",
+   "key": "amelie",
+   "languages": [
+    "fr"
+   ],
+   "title": "Amélie",
+   "year": 2001
+  }
+ },
+ {
+  "input": "Le Fabuleux Destin d'Amélie Poulain (2001) FR",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "FR"
+   ],
+   "key": "fabuleux destin damelie poulain",
+   "languages": [
+    "fr"
+   ],
+   "title": "Le Fabuleux Destin d'Amélie Poulain",
+   "year": 2001
+  }
+ },
+ {
+  "input": "Die Hard (1988) [DE]",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "key": "hard",
+   "languages": [
+    "de"
+   ],
+   "title": "Die Hard",
+   "year": 1988
+  }
+ },
+ {
+  "input": "DE: Die Hard 1988 HD",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "key": "hard",
+   "languages": [
+    "de"
+   ],
+   "quality": "hd",
+   "title": "Die Hard",
+   "year": 1988
+  }
+ },
+ {
+  "input": "Johnny English (2003)",
+  "kind": "movie",
+  "expected": {
+   "key": "johnny english",
+   "title": "Johnny English",
+   "year": 2003
+  }
+ },
+ {
+  "input": "The English Patient (1996) FHD",
+  "kind": "movie",
+  "expected": {
+   "key": "english patient",
+   "quality": "fhd",
+   "title": "The English Patient",
+   "year": 1996
+  }
+ },
+ {
+  "input": "Avatar (2009) Extended Collector's Edition",
+  "kind": "movie",
+  "expected": {
+   "key": "avatar",
+   "title": "Avatar",
+   "year": 2009
+  }
+ },
+ {
+  "input": "Movie 4K Dolby Vision",
+  "kind": "movie",
+  "expected": {
+   "hdr": "dolbyVision",
+   "key": "movie",
+   "quality": "uhd",
+   "title": "Movie"
+  }
+ },
+ {
+  "input": "Inception (2010) 2160p UHD BluRay REMUX HDR DV",
+  "kind": "movie",
+  "expected": {
+   "hdr": "dolbyVision",
+   "key": "inception",
+   "quality": "uhd",
+   "source": "remux",
+   "title": "Inception",
+   "year": 2010
+  }
+ },
+ {
+  "input": "Interstellar (2014) 4K HDR10+ x265",
+  "kind": "movie",
+  "expected": {
+   "codec": "hevc",
+   "hdr": "hdr10Plus",
+   "key": "interstellar",
+   "quality": "uhd",
+   "title": "Interstellar",
+   "year": 2014
+  }
+ },
+ {
+  "input": "Joker (2019) 1080p WEBRip x264",
+  "kind": "movie",
+  "expected": {
+   "codec": "h264",
+   "key": "joker",
+   "quality": "fhd",
+   "source": "webrip",
+   "title": "Joker",
+   "year": 2019
+  }
+ },
+ {
+  "input": "Tenet 2020 HDRip",
+  "kind": "movie",
+  "expected": {
+   "key": "tenet",
+   "source": "webrip",
+   "title": "Tenet",
+   "year": 2020
+  }
+ },
+ {
+  "input": "The Batman (2022) [Multi-Sub]",
+  "kind": "movie",
+  "expected": {
+   "audio": "multiAudio",
+   "key": "batman",
+   "title": "The Batman",
+   "year": 2022
+  }
+ },
+ {
+  "input": "The Batman (2022) MULTI",
+  "kind": "movie",
+  "expected": {
+   "audio": "multiAudio",
+   "key": "batman",
+   "title": "The Batman",
+   "year": 2022
+  }
+ },
+ {
+  "input": "Parasite (2019) KOR SUB",
+  "kind": "movie",
+  "expected": {
+   "audio": "subtitled",
+   "countries": [
+    "KR"
+   ],
+   "key": "parasite",
+   "languages": [
+    "ko"
+   ],
+   "title": "Parasite",
+   "year": 2019
+  }
+ },
+ {
+  "input": "Titanic (1997) DVDRip",
+  "kind": "movie",
+  "expected": {
+   "key": "titanic",
+   "quality": "sd",
+   "source": "dvd",
+   "title": "Titanic",
+   "year": 1997
+  }
+ },
+ {
+  "input": "Titanic 1997 DVD",
+  "kind": "movie",
+  "expected": {
+   "key": "titanic",
+   "quality": "sd",
+   "source": "dvd",
+   "title": "Titanic",
+   "year": 1997
+  }
+ },
+ {
+  "input": "Avatar 3D SBS (2009)",
+  "kind": "movie",
+  "expected": {
+   "is3D": true,
+   "key": "avatar",
+   "title": "Avatar",
+   "year": 2009
+  }
+ },
+ {
+  "input": "Gravity (2013) 3D",
+  "kind": "movie",
+  "expected": {
+   "is3D": true,
+   "key": "gravity",
+   "title": "Gravity",
+   "year": 2013
+  }
+ },
+ {
+  "input": "Gemini Man (2019) 4K 60FPS",
+  "kind": "movie",
+  "expected": {
+   "highFrameRate": true,
+   "key": "gemini man",
+   "quality": "uhd",
+   "title": "Gemini Man",
+   "year": 2019
+  }
+ },
+ {
+  "input": "IT (2017)",
+  "kind": "movie",
+  "expected": {
+   "key": "it",
+   "title": "IT",
+   "year": 2017
+  }
+ },
+ {
+  "input": "IT: Capitolo Due (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "it capitolo due",
+   "title": "IT: Capitolo Due",
+   "year": 2019
+  }
+ },
+ {
+  "input": "La-La Land (2016)",
+  "kind": "movie",
+  "expected": {
+   "key": "la land",
+   "title": "La-La Land",
+   "year": 2016
+  }
+ },
+ {
+  "input": "Mamma Mia! (2008)",
+  "kind": "movie",
+  "expected": {
+   "key": "mamma mia",
+   "title": "Mamma Mia!",
+   "year": 2008
+  }
+ },
+ {
+  "input": "Who Framed Roger Rabbit? (1988)",
+  "kind": "movie",
+  "expected": {
+   "key": "who framed roger rabbit",
+   "title": "Who Framed Roger Rabbit?",
+   "year": 1988
+  }
+ },
+ {
+  "input": "Movie (2020) BD 1080p",
+  "kind": "movie",
+  "expected": {
+   "key": "movie",
+   "quality": "fhd",
+   "source": "bluray",
+   "title": "Movie",
+   "year": 2020
+  }
+ },
+ {
+  "input": "NF-4K | Red Notice (2021)",
+  "kind": "movie",
+  "expected": {
+   "key": "red notice",
+   "platform": "Netflix",
+   "quality": "uhd",
+   "title": "Red Notice",
+   "year": 2021
+  }
+ },
+ {
+  "input": "4K-NF | The Irishman (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "irishman",
+   "platform": "Netflix",
+   "quality": "uhd",
+   "title": "The Irishman",
+   "year": 2019
+  }
+ },
+ {
+  "input": "NF | Glass Onion (2022)",
+  "kind": "movie",
+  "expected": {
+   "key": "glass onion",
+   "platform": "Netflix",
+   "title": "Glass Onion",
+   "year": 2022
+  }
+ },
+ {
+  "input": "AMZ | The Tomorrow War (2021) 4K",
+  "kind": "movie",
+  "expected": {
+   "key": "tomorrow war",
+   "platform": "Prime Video",
+   "quality": "uhd",
+   "title": "The Tomorrow War",
+   "year": 2021
+  }
+ },
+ {
+  "input": "DSNP | Turning Red (2022)",
+  "kind": "movie",
+  "expected": {
+   "key": "turning red",
+   "platform": "Disney+",
+   "title": "Turning Red",
+   "year": 2022
+  }
+ },
+ {
+  "input": "Disney+ | Luca (2021)",
+  "kind": "movie",
+  "expected": {
+   "key": "luca",
+   "platform": "Disney+",
+   "title": "Luca",
+   "year": 2021
+  }
+ },
+ {
+  "input": "VIP | John Wick 4 (2023) 4K",
+  "kind": "movie",
+  "expected": {
+   "key": "john wick 4",
+   "quality": "uhd",
+   "title": "John Wick 4",
+   "year": 2023
+  }
+ },
+ {
+  "input": "TR - Ayla (2017)",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "ayla",
+   "languages": [
+    "tr"
+   ],
+   "title": "Ayla",
+   "year": 2017
+  }
+ },
+ {
+  "input": "|TR| Babam ve Oğlum (2005)",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "babam ve oglum",
+   "languages": [
+    "tr"
+   ],
+   "title": "Babam ve Oğlum",
+   "year": 2005
+  }
+ },
+ {
+  "input": "Kış Uykusu (2014)",
+  "kind": "movie",
+  "expected": {
+   "key": "kis uykusu",
+   "languages": [
+    "tr"
+   ],
+   "title": "Kış Uykusu",
+   "year": 2014
+  }
+ },
+ {
+  "input": "EXXEN | Ölümlü Dünya 2 (2023)",
+  "kind": "movie",
+  "expected": {
+   "key": "olumlu dunya 2",
+   "platform": "Exxen",
+   "title": "Ölümlü Dünya 2",
+   "year": 2023
+  }
+ },
+ {
+  "input": "XXX Hot Movie",
+  "kind": "movie",
+  "expected": {
+   "isAdult": true,
+   "key": "xxx hot movie",
+   "title": "XXX Hot Movie"
+  }
+ },
+ {
+  "input": "+18 | Night Film",
+  "kind": "movie",
+  "expected": {
+   "isAdult": true,
+   "key": "night film",
+   "title": "Night Film"
+  }
+ },
+ {
+  "input": "|AR| فيلم الفيل الأزرق (2014)",
+  "kind": "movie",
+  "expected": {
+   "key": "فيلم الفيل الازرق",
+   "languages": [
+    "ar"
+   ],
+   "regions": [
+    "ARAB"
+   ],
+   "title": "فيلم الفيل الأزرق",
+   "year": 2014
+  }
+ },
+ {
+  "input": "الفيل الأزرق 2 (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "الفيل الازرق 2",
+   "languages": [
+    "ar"
+   ],
+   "title": "الفيل الأزرق 2",
+   "year": 2019
+  }
+ },
+ {
+  "input": "FR: Intouchables (2011) VF",
+  "kind": "movie",
+  "expected": {
+   "audio": "dubbed",
+   "countries": [
+    "FR"
+   ],
+   "key": "intouchables",
+   "languages": [
+    "fr"
+   ],
+   "title": "Intouchables",
+   "year": 2011
+  }
+ },
+ {
+  "input": "ES: Mar adentro (2004) Castellano",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "ES"
+   ],
+   "key": "mar adentro",
+   "languages": [
+    "es"
+   ],
+   "title": "Mar adentro",
+   "year": 2004
+  }
+ },
+ {
+  "input": "LAT | Coco (2017) Latino",
+  "kind": "movie",
+  "expected": {
+   "key": "coco",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "Coco",
+   "year": 2017
+  }
+ },
+ {
+  "input": "PT-BR | Cidade de Deus (2002) Dublado",
+  "kind": "movie",
+  "expected": {
+   "audio": "dubbed",
+   "countries": [
+    "BR"
+   ],
+   "key": "cidade de deus",
+   "languages": [
+    "pt"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "Cidade de Deus",
+   "year": 2002
+  }
+ },
+ {
+  "input": "IT | La vita è bella (1997)",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "IT"
+   ],
+   "key": "vita e bella",
+   "languages": [
+    "it"
+   ],
+   "title": "La vita è bella",
+   "year": 1997
+  }
+ },
+ {
+  "input": "PL: Seksmisja (1984) Lektor PL",
+  "kind": "movie",
+  "expected": {
+   "audio": "dubbed",
+   "countries": [
+    "PL"
+   ],
+   "key": "seksmisja",
+   "languages": [
+    "pl"
+   ],
+   "title": "Seksmisja",
+   "year": 1984
+  }
+ },
+ {
+  "input": "RU: Брат (1997)",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "RU"
+   ],
+   "key": "брат",
+   "languages": [
+    "ru"
+   ],
+   "title": "Брат",
+   "year": 1997
+  }
+ },
+ {
+  "input": "Брат 2 (2000)",
+  "kind": "movie",
+  "expected": {
+   "key": "брат 2",
+   "languages": [
+    "ru"
+   ],
+   "title": "Брат 2",
+   "year": 2000
+  }
+ },
+ {
+  "input": "|HI| Dangal (2016)",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "IN"
+   ],
+   "key": "dangal",
+   "languages": [
+    "hi"
+   ],
+   "title": "Dangal",
+   "year": 2016
+  }
+ },
+ {
+  "input": "Dangal (2016) Hindi",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "IN"
+   ],
+   "key": "dangal",
+   "languages": [
+    "hi"
+   ],
+   "title": "Dangal",
+   "year": 2016
+  }
+ },
+ {
+  "input": "Shoplifters (2018) [JP] 万引き家族",
+  "kind": "movie",
+  "expected": {
+   "countries": [
+    "JP"
+   ],
+   "key": "shoplifters",
+   "languages": [
+    "ja"
+   ],
+   "title": "Shoplifters",
+   "year": 2018
+  }
+ },
+ {
+  "input": "万引き家族 (2018)",
+  "kind": "movie",
+  "expected": {
+   "key": "万引き家族",
+   "languages": [
+    "ja"
+   ],
+   "title": "万引き家族",
+   "year": 2018
+  }
+ },
+ {
+  "input": "기생충 (2019)",
+  "kind": "movie",
+  "expected": {
+   "key": "기생충",
+   "languages": [
+    "ko"
+   ],
+   "title": "기생충",
+   "year": 2019
+  }
+ },
+ {
+  "input": "Kill Bill: Vol. 1 (2003)",
+  "kind": "movie",
+  "expected": {
+   "key": "kill bill vol 1",
+   "title": "Kill Bill: Vol. 1",
+   "year": 2003
+  }
+ },
+ {
+  "input": "The Godfather Part II (1974)",
+  "kind": "movie",
+  "expected": {
+   "key": "godfather part 2",
+   "title": "The Godfather Part II",
+   "year": 1974
+  }
+ },
+ {
+  "input": "Fast X (2023)",
+  "kind": "movie",
+  "expected": {
+   "key": "fast 10",
+   "title": "Fast X",
+   "year": 2023
+  }
+ },
+ {
+  "input": "Ocean's Eleven (2001)",
+  "kind": "movie",
+  "expected": {
+   "key": "oceans eleven",
+   "title": "Ocean's Eleven",
+   "year": 2001
+  }
+ },
+ {
+  "input": "Schindler's List (1993) Remastered",
+  "kind": "movie",
+  "expected": {
+   "key": "schindlers list",
+   "title": "Schindler's List",
+   "year": 1993
+  }
+ },
+ {
+  "input": "Toy Story 4 (2019) Dual Audio",
+  "kind": "movie",
+  "expected": {
+   "audio": "multiAudio",
+   "key": "toy story 4",
+   "title": "Toy Story 4",
+   "year": 2019
+  }
+ },
+ {
+  "input": "The Hobbit: An Unexpected Journey (2012) Extended",
+  "kind": "movie",
+  "expected": {
+   "key": "hobbit an unexpected journey",
+   "title": "The Hobbit: An Unexpected Journey",
+   "year": 2012
+  }
+ },
+ {
+  "input": "EN | The Super Mario Bros. Movie (2023) WEB-DL 2160p",
+  "kind": "movie",
+  "expected": {
+   "key": "super mario bros movie",
+   "languages": [
+    "en"
+   ],
+   "quality": "uhd",
+   "source": "webdl",
+   "title": "The Super Mario Bros. Movie",
+   "year": 2023
+  }
+ },
+ {
+  "input": "The.Shawshank.Redemption.1994.1080p.BluRay.x264",
+  "kind": "movie",
+  "expected": {
+   "codec": "h264",
+   "key": "shawshank redemption",
+   "quality": "fhd",
+   "source": "bluray",
+   "title": "The Shawshank Redemption",
+   "year": 1994
+  }
+ },
+ {
+  "input": "Blade Runner 2049 (2017)",
+  "kind": "movie",
+  "expected": {
+   "key": "blade runner 2049",
+   "title": "Blade Runner 2049",
+   "year": 2017
+  }
+ },
+ {
+  "input": "2001: A Space Odyssey (1968)",
+  "kind": "movie",
+  "expected": {
+   "key": "2001 a space odyssey",
+   "title": "2001: A Space Odyssey",
+   "year": 1968
+  }
+ },
+ {
+  "input": "Wall·E (2008)",
+  "kind": "movie",
+  "expected": {
+   "key": "wall e",
+   "title": "Wall·E",
+   "year": 2008
+  }
+ },
+ {
+  "input": "Dune (1984)",
+  "kind": "movie",
+  "expected": {
+   "key": "dune",
+   "title": "Dune",
+   "year": 1984
+  }
+ },
+ {
+  "input": "Dune (2021) 4K",
+  "kind": "movie",
+  "expected": {
+   "key": "dune",
+   "quality": "uhd",
+   "title": "Dune",
+   "year": 2021
+  }
+ },
+ {
+  "input": "Dune 4K",
+  "kind": "movie",
+  "expected": {
+   "key": "dune",
+   "quality": "uhd",
+   "title": "Dune"
+  }
+ },
+ {
+  "input": "Original Sin (2001)",
+  "kind": "movie",
+  "expected": {
+   "key": "original sin",
+   "title": "Original Sin",
+   "year": 2001
+  }
+ },
+ {
+  "input": "|TR| Kurtlar Vadisi S01 E05",
+  "kind": "series",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "episode": 5,
+   "key": "kurtlar vadisi",
+   "languages": [
+    "tr"
+   ],
+   "season": 1,
+   "title": "Kurtlar Vadisi"
+  }
+ },
+ {
+  "input": "4K-NF | Wednesday S02E03",
+  "kind": "series",
+  "expected": {
+   "episode": 3,
+   "key": "wednesday",
+   "platform": "Netflix",
+   "quality": "uhd",
+   "season": 2,
+   "title": "Wednesday"
+  }
+ },
+ {
+  "input": "NF-4K | Stranger Things",
+  "kind": "series",
+  "expected": {
+   "key": "stranger things",
+   "platform": "Netflix",
+   "quality": "uhd",
+   "title": "Stranger Things"
+  }
+ },
+ {
+  "input": "Ezel Sezon 1 Bölüm 12",
+  "kind": "series",
+  "expected": {
+   "episode": 12,
+   "key": "ezel",
+   "season": 1,
+   "title": "Ezel"
+  }
+ },
+ {
+  "input": "Muhteşem Yüzyıl 1. Sezon 3. Bölüm",
+  "kind": "series",
+  "expected": {
+   "episode": 3,
+   "key": "muhtesem yuzyil",
+   "languages": [
+    "tr"
+   ],
+   "season": 1,
+   "title": "Muhteşem Yüzyıl"
+  }
+ },
+ {
+  "input": "Kurtlar Vadisi Pusu 245. Bölüm",
+  "kind": "series",
+  "expected": {
+   "episode": 245,
+   "key": "kurtlar vadisi pusu",
+   "title": "Kurtlar Vadisi Pusu"
+  }
+ },
+ {
+  "input": "Breaking Bad 1x01 - Pilot",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "episodeTitle": "Pilot",
+   "key": "breaking bad",
+   "season": 1,
+   "title": "Breaking Bad"
+  }
+ },
+ {
+  "input": "Breaking Bad S01E01 - Pilot",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "episodeTitle": "Pilot",
+   "key": "breaking bad",
+   "season": 1,
+   "title": "Breaking Bad"
+  }
+ },
+ {
+  "input": "Game of Thrones S08E06 - The Iron Throne",
+  "kind": "series",
+  "expected": {
+   "episode": 6,
+   "episodeTitle": "The Iron Throne",
+   "key": "game of thrones",
+   "season": 8,
+   "title": "Game of Thrones"
+  }
+ },
+ {
+  "input": "Game of Thrones S08 E06 The Iron Throne 4K",
+  "kind": "series",
+  "expected": {
+   "episode": 6,
+   "episodeTitle": "The Iron Throne",
+   "key": "game of thrones",
+   "quality": "uhd",
+   "season": 8,
+   "title": "Game of Thrones"
+  }
+ },
+ {
+  "input": "Dark Staffel 1 Folge 2",
+  "kind": "series",
+  "expected": {
+   "episode": 2,
+   "key": "dark",
+   "season": 1,
+   "title": "Dark"
+  }
+ },
+ {
+  "input": "La Casa de Papel Temporada 1 Episodio 2",
+  "kind": "series",
+  "expected": {
+   "episode": 2,
+   "key": "casa de papel",
+   "season": 1,
+   "title": "La Casa de Papel"
+  }
+ },
+ {
+  "input": "Lupin Saison 1 Épisode 2",
+  "kind": "series",
+  "expected": {
+   "episode": 2,
+   "key": "lupin",
+   "season": 1,
+   "title": "Lupin"
+  }
+ },
+ {
+  "input": "The Office Season 2 Episode 3",
+  "kind": "series",
+  "expected": {
+   "episode": 3,
+   "key": "office",
+   "season": 2,
+   "title": "The Office"
+  }
+ },
+ {
+  "input": "The Office (US) S01E01",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "office us",
+   "season": 1,
+   "title": "The Office (US)"
+  }
+ },
+ {
+  "input": "The Office (UK) S01E01",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "office uk",
+   "season": 1,
+   "title": "The Office (UK)"
+  }
+ },
+ {
+  "input": "EN| The Office US",
+  "kind": "series",
+  "expected": {
+   "key": "office us",
+   "languages": [
+    "en"
+   ],
+   "title": "The Office US"
+  }
+ },
+ {
+  "input": "Shameless (US)",
+  "kind": "series",
+  "expected": {
+   "key": "shameless us",
+   "title": "Shameless (US)"
+  }
+ },
+ {
+  "input": "Fargo (2014)",
+  "kind": "series",
+  "expected": {
+   "key": "fargo",
+   "title": "Fargo",
+   "year": 2014
+  }
+ },
+ {
+  "input": "Show S01E01 HD",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "show",
+   "quality": "hd",
+   "season": 1,
+   "title": "Show"
+  }
+ },
+ {
+  "input": "The Simpsons S35E01 1080p WEB-DL",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "simpsons",
+   "quality": "fhd",
+   "season": 35,
+   "source": "webdl",
+   "title": "The Simpsons"
+  }
+ },
+ {
+  "input": "Friends S1 E1",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "friends",
+   "season": 1,
+   "title": "Friends"
+  }
+ },
+ {
+  "input": "Friends S01 E01 The One Where Monica Gets a Roommate",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "episodeTitle": "The One Where Monica Gets a Roommate",
+   "key": "friends",
+   "season": 1,
+   "title": "Friends"
+  }
+ },
+ {
+  "input": "Diriliş Ertuğrul EP01",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "dirilis ertugrul",
+   "languages": [
+    "tr"
+   ],
+   "title": "Diriliş Ertuğrul"
+  }
+ },
+ {
+  "input": "Diriliş Ertuğrul Ep. 12",
+  "kind": "series",
+  "expected": {
+   "episode": 12,
+   "key": "dirilis ertugrul",
+   "languages": [
+    "tr"
+   ],
+   "title": "Diriliş Ertuğrul"
+  }
+ },
+ {
+  "input": "Kuruluş Osman Bölüm 150",
+  "kind": "series",
+  "expected": {
+   "episode": 150,
+   "key": "kurulus osman",
+   "languages": [
+    "tr"
+   ],
+   "title": "Kuruluş Osman"
+  }
+ },
+ {
+  "input": "Yalı Çapkını 2. Sezon 15. Bölüm",
+  "kind": "series",
+  "expected": {
+   "episode": 15,
+   "key": "yali capkini",
+   "languages": [
+    "tr"
+   ],
+   "season": 2,
+   "title": "Yalı Çapkını"
+  }
+ },
+ {
+  "input": "TR: Muhteşem Yüzyıl S01E03",
+  "kind": "series",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "episode": 3,
+   "key": "muhtesem yuzyil",
+   "languages": [
+    "tr"
+   ],
+   "season": 1,
+   "title": "Muhteşem Yüzyıl"
+  }
+ },
+ {
+  "input": "|AR| مسلسل الهيبة الحلقة 5",
+  "kind": "series",
+  "expected": {
+   "episode": 5,
+   "key": "مسلسل الهيبه",
+   "languages": [
+    "ar"
+   ],
+   "regions": [
+    "ARAB"
+   ],
+   "title": "مسلسل الهيبة"
+  }
+ },
+ {
+  "input": "DE: Babylon Berlin S04E01 Synchro",
+  "kind": "series",
+  "expected": {
+   "audio": "dubbed",
+   "countries": [
+    "DE"
+   ],
+   "episode": 1,
+   "key": "babylon berlin",
+   "languages": [
+    "de"
+   ],
+   "season": 4,
+   "title": "Babylon Berlin"
+  }
+ },
+ {
+  "input": "The Crown S06E10 [Multi-Sub]",
+  "kind": "series",
+  "expected": {
+   "audio": "multiAudio",
+   "episode": 10,
+   "key": "crown",
+   "season": 6,
+   "title": "The Crown"
+  }
+ },
+ {
+  "input": "House of the Dragon S02E01 2160p HDR",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "hdr": "hdr",
+   "key": "house of the dragon",
+   "quality": "uhd",
+   "season": 2,
+   "title": "House of the Dragon"
+  }
+ },
+ {
+  "input": "Tokyo Vice (2022) S01E01",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "tokyo vice",
+   "season": 1,
+   "title": "Tokyo Vice",
+   "year": 2022
+  }
+ },
+ {
+  "input": "Doctor Who (2005)",
+  "kind": "series",
+  "expected": {
+   "key": "doctor who",
+   "title": "Doctor Who",
+   "year": 2005
+  }
+ },
+ {
+  "input": "Doctor Who (1963)",
+  "kind": "series",
+  "expected": {
+   "key": "doctor who",
+   "title": "Doctor Who",
+   "year": 1963
+  }
+ },
+ {
+  "input": "EN| Squid Game S01E01 KOR SUB",
+  "kind": "series",
+  "expected": {
+   "audio": "subtitled",
+   "countries": [
+    "KR"
+   ],
+   "episode": 1,
+   "key": "squid game",
+   "languages": [
+    "en",
+    "ko"
+   ],
+   "season": 1,
+   "title": "Squid Game"
+  }
+ },
+ {
+  "input": "Episode 4",
+  "kind": "series",
+  "expected": {
+   "episode": 4,
+   "key": "episode 4",
+   "title": "Episode 4"
+  }
+ },
+ {
+  "input": "Lost S01E01E02",
+  "kind": "series",
+  "expected": {
+   "episode": 1,
+   "key": "lost",
+   "season": 1,
+   "title": "Lost"
+  }
+ },
+ {
+  "input": "Sherlock S04",
+  "kind": "series",
+  "expected": {
+   "key": "sherlock",
+   "season": 4,
+   "title": "Sherlock"
+  }
+ },
+ {
+  "input": "|EN| Breaking Bad (2008)",
+  "kind": "series",
+  "expected": {
+   "key": "breaking bad",
+   "languages": [
+    "en"
+   ],
+   "title": "Breaking Bad",
+   "year": 2008
+  }
+ },
+ {
+  "input": "The Last Kingdom S05E10 1080p",
+  "kind": "series",
+  "expected": {
+   "episode": 10,
+   "key": "last kingdom",
+   "quality": "fhd",
+   "season": 5,
+   "title": "The Last Kingdom"
+  }
+ },
+ {
+  "input": "UK: BBC One FHD (Backup)",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "isBackup": true,
+   "key": "bbc one",
+   "languages": [
+    "en"
+   ],
+   "quality": "fhd",
+   "title": "BBC One"
+  }
+ },
+ {
+  "input": "UK: BBC One HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "key": "bbc one",
+   "languages": [
+    "en"
+   ],
+   "quality": "hd",
+   "title": "BBC One"
+  }
+ },
+ {
+  "input": "BBC One (Backup)",
+  "kind": "live",
+  "expected": {
+   "isBackup": true,
+   "key": "bbc one",
+   "title": "BBC One"
+  }
+ },
+ {
+  "input": "ITV+1 HD",
+  "kind": "live",
+  "expected": {
+   "key": "itv",
+   "quality": "hd",
+   "timeshiftHours": 1,
+   "title": "ITV"
+  }
+ },
+ {
+  "input": "ITV +1",
+  "kind": "live",
+  "expected": {
+   "key": "itv",
+   "timeshiftHours": 1,
+   "title": "ITV"
+  }
+ },
+ {
+  "input": "E4+1",
+  "kind": "live",
+  "expected": {
+   "key": "e4",
+   "timeshiftHours": 1,
+   "title": "E4"
+  }
+ },
+ {
+  "input": "Channel 4 +1 HD",
+  "kind": "live",
+  "expected": {
+   "key": "channel 4",
+   "quality": "hd",
+   "timeshiftHours": 1,
+   "title": "Channel 4"
+  }
+ },
+ {
+  "input": "BBC One -1h",
+  "kind": "live",
+  "expected": {
+   "key": "bbc one",
+   "timeshiftHours": -1,
+   "title": "BBC One"
+  }
+ },
+ {
+  "input": "AR: الجزيرة HD",
+  "kind": "live",
+  "expected": {
+   "key": "الجزيره",
+   "languages": [
+    "ar"
+   ],
+   "quality": "hd",
+   "regions": [
+    "ARAB"
+   ],
+   "title": "الجزيرة"
+  }
+ },
+ {
+  "input": "◉ AR | MBC 1 HD",
+  "kind": "live",
+  "expected": {
+   "key": "mbc 1",
+   "languages": [
+    "ar"
+   ],
+   "quality": "hd",
+   "regions": [
+    "ARAB"
+   ],
+   "title": "MBC 1"
+  }
+ },
+ {
+  "input": "◉ AR MBC 2",
+  "kind": "live",
+  "expected": {
+   "key": "mbc 2",
+   "languages": [
+    "ar"
+   ],
+   "regions": [
+    "ARAB"
+   ],
+   "title": "MBC 2"
+  }
+ },
+ {
+  "input": "TR - Kanal D HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "kanal d",
+   "languages": [
+    "tr"
+   ],
+   "quality": "hd",
+   "title": "Kanal D"
+  }
+ },
+ {
+  "input": "TR: Show TV ᴴᴰ",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "show tv",
+   "languages": [
+    "tr"
+   ],
+   "quality": "hd",
+   "title": "Show TV"
+  }
+ },
+ {
+  "input": "VIP | Show TV ᴴᴰ",
+  "kind": "live",
+  "expected": {
+   "key": "show tv",
+   "quality": "hd",
+   "title": "Show TV"
+  }
+ },
+ {
+  "input": "Show TVᴴᴰ",
+  "kind": "live",
+  "expected": {
+   "key": "show tv",
+   "quality": "hd",
+   "title": "Show TV"
+  }
+ },
+ {
+  "input": "🇹🇷 Kanal D HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "kanal d",
+   "languages": [
+    "tr"
+   ],
+   "quality": "hd",
+   "title": "Kanal D"
+  }
+ },
+ {
+  "input": "🇦🇷 TyC Sports",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "AR"
+   ],
+   "key": "tyc sports",
+   "languages": [
+    "es"
+   ],
+   "title": "TyC Sports"
+  }
+ },
+ {
+  "input": "🇬🇧 Sky Sports Main Event",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "key": "sky sports main event",
+   "languages": [
+    "en"
+   ],
+   "title": "Sky Sports Main Event"
+  }
+ },
+ {
+  "input": "UK| Sky Sports Main Event ᵁᴴᴰ ⁶⁰ᶠᵖˢ",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "highFrameRate": true,
+   "key": "sky sports main event",
+   "languages": [
+    "en"
+   ],
+   "quality": "uhd",
+   "title": "Sky Sports Main Event"
+  }
+ },
+ {
+  "input": "XXX | Brazzers HD",
+  "kind": "live",
+  "expected": {
+   "isAdult": true,
+   "key": "brazzers",
+   "quality": "hd",
+   "title": "Brazzers"
+  }
+ },
+ {
+  "input": "Adult | Private TV",
+  "kind": "live",
+  "expected": {
+   "isAdult": true,
+   "key": "private tv",
+   "title": "Private TV"
+  }
+ },
+ {
+  "input": "Adult Swim HD",
+  "kind": "live",
+  "expected": {
+   "key": "adult swim",
+   "quality": "hd",
+   "title": "Adult Swim"
+  }
+ },
+ {
+  "input": "beIN Sports 1 HD",
+  "kind": "live",
+  "expected": {
+   "key": "bein sports 1",
+   "quality": "hd",
+   "title": "beIN Sports 1"
+  }
+ },
+ {
+  "input": "AR | beIN Sports 1 HD",
+  "kind": "live",
+  "expected": {
+   "key": "bein sports 1",
+   "languages": [
+    "ar"
+   ],
+   "quality": "hd",
+   "regions": [
+    "ARAB"
+   ],
+   "title": "beIN Sports 1"
+  }
+ },
+ {
+  "input": "FR: TF1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "FR"
+   ],
+   "key": "tf1",
+   "languages": [
+    "fr"
+   ],
+   "quality": "hd",
+   "title": "TF1"
+  }
+ },
+ {
+  "input": "FR| TF1 FHD (B)",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "FR"
+   ],
+   "isBackup": true,
+   "key": "tf1",
+   "languages": [
+    "fr"
+   ],
+   "quality": "fhd",
+   "title": "TF1"
+  }
+ },
+ {
+  "input": "NL: NPO 1 HD Backup",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "NL"
+   ],
+   "isBackup": true,
+   "key": "npo 1",
+   "languages": [
+    "nl"
+   ],
+   "quality": "hd",
+   "title": "NPO 1"
+  }
+ },
+ {
+  "input": "NL: NPO 1 HD (2)",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "NL"
+   ],
+   "isBackup": true,
+   "key": "npo 1",
+   "languages": [
+    "nl"
+   ],
+   "quality": "hd",
+   "title": "NPO 1"
+  }
+ },
+ {
+  "input": "PPV 1: UFC 300",
+  "kind": "live",
+  "expected": {
+   "isEvent": true,
+   "key": "ppv 1 ufc 300",
+   "title": "PPV 1: UFC 300"
+  }
+ },
+ {
+  "input": "PPV EVENT 3",
+  "kind": "live",
+  "expected": {
+   "isEvent": true,
+   "key": "ppv event 3",
+   "title": "PPV EVENT 3"
+  }
+ },
+ {
+  "input": "US: HBO East",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "US"
+   ],
+   "key": "hbo east",
+   "languages": [
+    "en"
+   ],
+   "title": "HBO East"
+  }
+ },
+ {
+  "input": "USA: ESPN 2 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "US"
+   ],
+   "key": "espn 2",
+   "languages": [
+    "en"
+   ],
+   "quality": "hd",
+   "title": "ESPN 2"
+  }
+ },
+ {
+  "input": "SKY Sports Main Event UHD",
+  "kind": "live",
+  "expected": {
+   "key": "sky sports main event",
+   "quality": "uhd",
+   "title": "SKY Sports Main Event"
+  }
+ },
+ {
+  "input": "##### UK SPORTS #####",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "key": "sports",
+   "languages": [
+    "en"
+   ],
+   "title": "SPORTS"
+  }
+ },
+ {
+  "input": "DE: Das Erste HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "key": "das erste",
+   "languages": [
+    "de"
+   ],
+   "quality": "hd",
+   "title": "Das Erste"
+  }
+ },
+ {
+  "input": "DE| ZDF FHD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "key": "zdf",
+   "languages": [
+    "de"
+   ],
+   "quality": "fhd",
+   "title": "ZDF"
+  }
+ },
+ {
+  "input": "DE: RTL Yedek",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "isBackup": true,
+   "key": "rtl",
+   "languages": [
+    "de"
+   ],
+   "title": "RTL"
+  }
+ },
+ {
+  "input": "ES: La 1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "ES"
+   ],
+   "key": "la 1",
+   "languages": [
+    "es"
+   ],
+   "quality": "hd",
+   "title": "La 1"
+  }
+ },
+ {
+  "input": "ES: La Sexta",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "ES"
+   ],
+   "key": "la sexta",
+   "languages": [
+    "es"
+   ],
+   "title": "La Sexta"
+  }
+ },
+ {
+  "input": "|LATAM| AR: TyC Sports",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "AR"
+   ],
+   "key": "tyc sports",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "TyC Sports"
+  }
+ },
+ {
+  "input": "LATAM | ESPN 2",
+  "kind": "live",
+  "expected": {
+   "key": "espn 2",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "ESPN 2"
+  }
+ },
+ {
+  "input": "EXYU: RTS 1",
+  "kind": "live",
+  "expected": {
+   "key": "rts 1",
+   "languages": [
+    "sr",
+    "hr",
+    "bs"
+   ],
+   "regions": [
+    "EXYU"
+   ],
+   "title": "RTS 1"
+  }
+ },
+ {
+  "input": "EX-YU | HRT 1",
+  "kind": "live",
+  "expected": {
+   "key": "hrt 1",
+   "languages": [
+    "sr",
+    "hr",
+    "bs"
+   ],
+   "regions": [
+    "EXYU"
+   ],
+   "title": "HRT 1"
+  }
+ },
+ {
+  "input": "|GR| ERT 1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "GR"
+   ],
+   "key": "ert 1",
+   "languages": [
+    "el"
+   ],
+   "quality": "hd",
+   "title": "ERT 1"
+  }
+ },
+ {
+  "input": "PL: TVP 1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "PL"
+   ],
+   "key": "tvp 1",
+   "languages": [
+    "pl"
+   ],
+   "quality": "hd",
+   "title": "TVP 1"
+  }
+ },
+ {
+  "input": "RU: Первый канал",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "RU"
+   ],
+   "key": "первыи канал",
+   "languages": [
+    "ru"
+   ],
+   "title": "Первый канал"
+  }
+ },
+ {
+  "input": "Первый канал HD",
+  "kind": "live",
+  "expected": {
+   "key": "первыи канал",
+   "languages": [
+    "ru"
+   ],
+   "quality": "hd",
+   "title": "Первый канал"
+  }
+ },
+ {
+  "input": "IN: Star Plus HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "IN"
+   ],
+   "key": "star plus",
+   "quality": "hd",
+   "title": "Star Plus"
+  }
+ },
+ {
+  "input": "PK: Geo News",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "PK"
+   ],
+   "key": "geo news",
+   "languages": [
+    "ur"
+   ],
+   "title": "Geo News"
+  }
+ },
+ {
+  "input": "KSA: SBC HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "SA"
+   ],
+   "key": "sbc",
+   "languages": [
+    "ar"
+   ],
+   "quality": "hd",
+   "regions": [
+    "ARAB"
+   ],
+   "title": "SBC"
+  }
+ },
+ {
+  "input": "MBC Drama HD",
+  "kind": "live",
+  "expected": {
+   "key": "mbc drama",
+   "quality": "hd",
+   "title": "MBC Drama"
+  }
+ },
+ {
+  "input": "TR: TRT 1 4K",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "trt 1",
+   "languages": [
+    "tr"
+   ],
+   "quality": "uhd",
+   "title": "TRT 1"
+  }
+ },
+ {
+  "input": "TR: TRT 1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "trt 1",
+   "languages": [
+    "tr"
+   ],
+   "quality": "hd",
+   "title": "TRT 1"
+  }
+ },
+ {
+  "input": "CNN International",
+  "kind": "live",
+  "expected": {
+   "key": "cnn international",
+   "title": "CNN International"
+  }
+ },
+ {
+  "input": "TRT Haber",
+  "kind": "live",
+  "expected": {
+   "key": "trt haber",
+   "title": "TRT Haber"
+  }
+ },
+ {
+  "input": "CA: CBC Toronto HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "CA"
+   ],
+   "key": "cbc toronto",
+   "languages": [
+    "en"
+   ],
+   "quality": "hd",
+   "title": "CBC Toronto"
+  }
+ },
+ {
+  "input": "NORDIC | TV4 Sverige",
+  "kind": "live",
+  "expected": {
+   "key": "tv4 sverige",
+   "regions": [
+    "NORDIC"
+   ],
+   "title": "TV4 Sverige"
+  }
+ },
+ {
+  "input": "SE: SVT1 HD",
+  "kind": "live",
+  "expected": {
+   "countries": [
+    "SE"
+   ],
+   "key": "svt1",
+   "languages": [
+    "sv"
+   ],
+   "quality": "hd",
+   "regions": [
+    "NORDIC"
+   ],
+   "title": "SVT1"
+  }
+ },
+ {
+  "input": "Sky Cinema Premiere HD",
+  "kind": "live",
+  "expected": {
+   "key": "sky cinema premiere",
+   "quality": "hd",
+   "title": "Sky Cinema Premiere"
+  }
+ },
+ {
+  "input": "Nickelodeon",
+  "kind": "live",
+  "expected": {
+   "key": "nickelodeon",
+   "title": "Nickelodeon"
+  }
+ },
+ {
+  "input": "|EN| Cartoon Network HD",
+  "kind": "live",
+  "expected": {
+   "key": "cartoon network",
+   "languages": [
+    "en"
+   ],
+   "quality": "hd",
+   "title": "Cartoon Network"
+  }
+ },
+ {
+  "input": "NBA TV",
+  "kind": "live",
+  "expected": {
+   "key": "nba tv",
+   "title": "NBA TV"
+  }
+ },
+ {
+  "input": "EN | Alien³ (1992)",
+  "kind": "movie",
+  "expected": {
+   "key": "alien 3",
+   "languages": [
+    "en"
+   ],
+   "title": "Alien 3",
+   "year": 1992
+  }
+ },
+ {
+  "input": "Ayla (2017)",
+  "kind": "movie",
+  "category": "TR | YERLİ FİLMLER",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "ayla",
+   "languages": [
+    "tr"
+   ],
+   "title": "Ayla",
+   "year": 2017
+  }
+ },
+ {
+  "input": "The Batman (2022)",
+  "kind": "movie",
+  "category": "EN | MOVIES 4K",
+  "expected": {
+   "key": "batman",
+   "languages": [
+    "en"
+   ],
+   "quality": "uhd",
+   "title": "The Batman",
+   "year": 2022
+  }
+ },
+ {
+  "input": "IT - Pennywise (2017)",
+  "kind": "movie",
+  "category": "IT | FILM",
+  "expected": {
+   "countries": [
+    "IT"
+   ],
+   "key": "pennywise",
+   "languages": [
+    "it"
+   ],
+   "title": "Pennywise",
+   "year": 2017
+  }
+ },
+ {
+  "input": "IT - Pennywise (2017)",
+  "kind": "movie",
+  "category": "EN | MOVIES",
+  "expected": {
+   "key": "it pennywise",
+   "languages": [
+    "en"
+   ],
+   "title": "IT - Pennywise",
+   "year": 2017
+  }
+ },
+ {
+  "input": "Coco (2017)",
+  "kind": "movie",
+  "category": "LATINO | PELICULAS",
+  "expected": {
+   "key": "coco",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "Coco",
+   "year": 2017
+  }
+ },
+ {
+  "input": "Stranger Things",
+  "kind": "movie",
+  "category": "NETFLIX SERIES",
+  "expected": {
+   "key": "stranger things",
+   "platform": "Netflix",
+   "title": "Stranger Things"
+  }
+ },
+ {
+  "input": "Kurtlar Vadisi Pusu",
+  "kind": "series",
+  "category": "TURKISH SERIES",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "kurtlar vadisi pusu",
+   "languages": [
+    "tr"
+   ],
+   "title": "Kurtlar Vadisi Pusu"
+  }
+ },
+ {
+  "input": "Dark S01E01",
+  "kind": "series",
+  "category": "DE | SERIEN",
+  "expected": {
+   "countries": [
+    "DE"
+   ],
+   "episode": 1,
+   "key": "dark",
+   "languages": [
+    "de"
+   ],
+   "season": 1,
+   "title": "Dark"
+  }
+ },
+ {
+  "input": "TyC Sports",
+  "kind": "live",
+  "category": "LATAM | DEPORTES",
+  "expected": {
+   "key": "tyc sports",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "TyC Sports"
+  }
+ },
+ {
+  "input": "AR: TyC Sports",
+  "kind": "live",
+  "category": "LATAM | DEPORTES",
+  "expected": {
+   "countries": [
+    "AR"
+   ],
+   "key": "tyc sports",
+   "languages": [
+    "es"
+   ],
+   "regions": [
+    "LATAM"
+   ],
+   "title": "TyC Sports"
+  }
+ },
+ {
+  "input": "Kanal D",
+  "kind": "live",
+  "category": "TÜRKİYE ULUSAL",
+  "expected": {
+   "countries": [
+    "TR"
+   ],
+   "key": "kanal d",
+   "languages": [
+    "tr"
+   ],
+   "title": "Kanal D"
+  }
+ },
+ {
+  "input": "Private TV",
+  "kind": "live",
+  "category": "XXX | ADULT",
+  "expected": {
+   "isAdult": true,
+   "key": "private tv",
+   "title": "Private TV"
+  }
+ },
+ {
+  "input": "BBC One",
+  "kind": "live",
+  "category": "UK | ENTERTAINMENT ᴴᴰ",
+  "expected": {
+   "countries": [
+    "GB"
+   ],
+   "key": "bbc one",
+   "languages": [
+    "en"
+   ],
+   "quality": "hd",
+   "title": "BBC One"
+  }
+ },
+ {
+  "input": "Al Jazeera",
+  "kind": "live",
+  "category": "ARABIC | NEWS",
+  "expected": {
+   "key": "al jazeera",
+   "languages": [
+    "ar"
+   ],
+   "regions": [
+    "ARAB"
+   ],
+   "title": "Al Jazeera"
+  }
+ },
+ {
+  "input": "MBC 1",
+  "kind": "live",
+  "category": "AR | MBC",
+  "expected": {
+   "key": "mbc 1",
+   "languages": [
+    "ar"
+   ],
+   "regions": [
+    "ARAB"
+   ],
+   "title": "MBC 1"
+  }
+ }
+]

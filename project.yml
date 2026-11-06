@@ -1,0 +1,111 @@
+name: TunaTV
+options:
+  bundleIdPrefix: io.github.dsugurtuna
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+  groupSortPosition: top
+
+settings:
+  base:
+    MARKETING_VERSION: "2.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    ARCHS: arm64
+    ONLY_ACTIVE_ARCH: NO
+    DEAD_CODE_STRIPPING: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    GENERATE_INFOPLIST_FILE: NO
+
+packages:
+  AetherEngine:
+    url: https://github.com/superuser404notfound/AetherEngine
+    exactVersion: 7.58.0
+  TunaCore:
+    path: Packages/TunaCore
+
+targets:
+  TunaTV:
+    type: application
+    platform: macOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: App
+    dependencies:
+      - package: TunaCore
+        product: TunaCore
+      - package: AetherEngine
+        product: AetherEngine
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Tuna TV
+        CFBundleName: Tuna TV
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: "15.0"
+        LSApplicationCategoryType: public.app-category.entertainment
+        NSHumanReadableCopyright: "Free and open source (GPL-3.0). Bring your own IPTV subscription."
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        NSLocalNetworkUsageDescription: "Tuna TV plays streams from your IPTV provider."
+        NSSupportsAutomaticGraphicsSwitching: true
+    entitlements:
+      path: App/TunaTV.entitlements
+      properties: {}
+    settings:
+      base:
+        PRODUCT_NAME: Tuna TV
+        PRODUCT_MODULE_NAME: TunaTV
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.dsugurtuna.tunatv
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: ""
+        ENABLE_HARDENED_RUNTIME: NO
+        COMBINE_HIDPI_IMAGES: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) TUNA_ENGINE"
+
+  # Same app sources WITHOUT the playback engine: fast CI type-check of all app code.
+  TunaTVCheck:
+    type: application
+    platform: macOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: App
+    dependencies:
+      - package: TunaCore
+        product: TunaCore
+    settings:
+      base:
+        PRODUCT_NAME: TunaTVCheck
+        PRODUCT_MODULE_NAME: TunaTV
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.dsugurtuna.tunatv.check
+        INFOPLIST_FILE: App/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: ""
+        ENABLE_HARDENED_RUNTIME: NO
+
+schemes:
+  TunaTV:
+    build:
+      targets:
+        TunaTV: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+  TunaTVCheck:
+    build:
+      targets:
+        TunaTVCheck: all
+    run:
+      config: Debug

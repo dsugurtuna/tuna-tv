@@ -1,0 +1,42 @@
+ï»¿#EXTM3U url-tvg="http://epg.example.net/guide.xml,http://epg2.example.net/guide.xml.gz" x-tvg-url="http://epg.example.net/guide.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="BBCOne.uk" tvg-name="BBC One" tvg-logo="http://logos.example.net/bbc1.png" tvg-chno="101" tvg-country="GB" tvg-language="English" group-title="UK, News & Entertainment" catchup="shift" catchup-days="7",BBC One HD
+http://stream.example.net/live/u/p/101.ts
+#EXTINF:-1 tvg-id='itv1.uk' tvg-logo='http://logos.example.net/itv.png' group-title='UK',ITV1, The Best
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (SMART-TV; Linux; Tizen 6.0)
+#EXTVLCOPT:http-referrer=https://player.example.net/
+https://hls.example.net/itv1/index.m3u8
+#EXTINF:0 tvg-id=news24 group-title="News" tvg-name="News 24 (alt)",News 24
+#EXTGRP:Ignored because group-title wins
+http://stream.example.net/news24.m3u8|User-Agent=Kodi%2F21.1&Referer=http%3A%2F%2Fref.example.net%2F
+#EXTGRP:Radio
+#EXTINF:-1,Jazz FM
+   http://radio.example.net/jazz.mp3   
+http://orphan.example.net/no-extinf.ts
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ExoPlayer&Referer=https://dash.example.net/
+#EXTINF:-1 tvg-logo="http://logos.example.net/dash.png" group-title="DRM",Dash Channel
+https://dash.example.net/live/manifest.mpd
+
+# a comment line
+#EXTINF:-1 group-title="Movies",EN| The Matrix (1999)
+http://vod.example.net/movie/u/p/2001.mkv
+#EXTINF:-1 tvg-logo="http://img.example.net/heat.jpg" group-title="Cinema",Heat 1995
+http://files.example.net/films/Heat.1995.1080p.mp4?token=abc
+#EXTINF:-1 group-title="VOD | Kids",Toy Story
+http://files.example.net/v/12345
+#EXTINF:-1 tvg-logo="http://img.example.net/bb.jpg" group-title="Series",Breaking Bad S01E01 - Pilot
+http://files.example.net/bb/s01e01.mkv
+#EXTINF:-1 group-title="Series",Breaking Bad S01E02
+http://files.example.net/bb/s01e02.mkv
+#EXTINF:-1 group-title="Series",breaking bad s02e01 Seven Thirty-Seven
+http://files.example.net/bb/s02e01.mkv
+#EXTINF:-1 group-title="Series",Friends 1x01 The One Where Monica Gets a Roommate
+http://vod.example.net/series/u/p/7001.mp4
+#EXTINF:-1 group-title="Sports" tvg-name="Sky Sports F1",
+http://stream.example.net/live/u/p/301.ts
+#EXTINF:-1 tvg-id="x" group-title="Bad",Local File
+file:///etc/passwd
+#EXTINF:-1 group-title="UK",BBC One HD (same URL again)
+http://stream.example.net/live/u/p/101.ts
+#EXTINF:-1 group-title="FR",Télé Matin
+http://stream.example.net/fr/telematin.ts

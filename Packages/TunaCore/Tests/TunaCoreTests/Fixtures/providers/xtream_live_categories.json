@@ -1,0 +1,8 @@
+[
+{"category_id":"1","category_name":"UK | NEWS","parent_id":0},
+{"category_id":2,"category_name":"UK | SPORTS ⚽","parent_id":"0"},
+{"category_id":"3","category_name":"TR | ULUSAL","parent_id":0},
+{"category_id":"4","category_name":null,"parent_id":0},
+{"category_id":"1","category_name":"duplicate id","parent_id":0},
+{"category_name":"no id"}
+]

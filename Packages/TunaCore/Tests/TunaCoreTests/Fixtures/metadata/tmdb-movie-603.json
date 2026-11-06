@@ -1,0 +1,160 @@
+{
+  "adult": false,
+  "backdrop_path": "/ncEsesgOJDNrTUED89hYbA117wo.jpg",
+  "belongs_to_collection": {
+    "id": 2344,
+    "name": "The Matrix Collection",
+    "poster_path": "/bV9qTVHTVf0gkW0j7p7M0ILD4pG.jpg",
+    "backdrop_path": "/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+  },
+  "budget": 63000000,
+  "genres": [
+    { "id": 28, "name": "Action" },
+    { "id": 878, "name": "Science Fiction" }
+  ],
+  "homepage": "http://www.warnerbros.com/matrix",
+  "id": 603,
+  "imdb_id": "tt0133093",
+  "origin_country": ["US"],
+  "original_language": "en",
+  "original_title": "The Matrix",
+  "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+  "popularity": 81.613,
+  "poster_path": "/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+  "production_companies": [
+    { "id": 79, "logo_path": "/at4uYdwAAgNRKhZuuFX8ShKSybw.png", "name": "Village Roadshow Pictures", "origin_country": "US" },
+    { "id": 372, "logo_path": null, "name": "Groucho II Film Partnership", "origin_country": "" },
+    { "id": 1885, "logo_path": "/xlvoOZr4s1PygosrwZyolIFe5xs.png", "name": "Silver Pictures", "origin_country": "US" },
+    { "id": 174, "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.svg", "name": "Warner Bros. Pictures", "origin_country": "US" }
+  ],
+  "production_countries": [
+    { "iso_3166_1": "US", "name": "United States of America" },
+    { "iso_3166_1": "AU", "name": "Australia" }
+  ],
+  "release_date": "1999-03-31",
+  "revenue": 463517383,
+  "runtime": 136,
+  "spoken_languages": [
+    { "english_name": "English", "iso_639_1": "en", "name": "English" }
+  ],
+  "status": "Released",
+  "tagline": "Welcome to the Real World.",
+  "title": "The Matrix",
+  "video": false,
+  "vote_average": 8.218,
+  "vote_count": 26412,
+  "credits": {
+    "cast": [
+      { "adult": false, "gender": 2, "id": 2975, "known_for_department": "Acting", "name": "Laurence Fishburne", "original_name": "Laurence Fishburne", "popularity": 21.4, "profile_path": "/iwx7h0AfuPZpj0b2vmCpVpU9ePR.jpg", "cast_id": 35, "character": "Morpheus", "credit_id": "52fe425bc3a36847f80181c1", "order": 1 },
+      { "adult": false, "gender": 2, "id": 6384, "known_for_department": "Acting", "name": "Keanu Reeves", "original_name": "Keanu Reeves", "popularity": 50.1, "profile_path": "/4D0PpNI0kmP58hgrwGC3wCjxhnm.jpg", "cast_id": 34, "character": "Thomas A. Anderson / Neo", "credit_id": "52fe425bc3a36847f80181c5", "order": 0 },
+      { "adult": false, "gender": 1, "id": 530, "known_for_department": "Acting", "name": "Carrie-Anne Moss", "original_name": "Carrie-Anne Moss", "popularity": 18.0, "profile_path": "/xD4jTA3KmVp5Rq3aHcymL9DUGjD.jpg", "cast_id": 36, "character": "Trinity", "credit_id": "52fe425bc3a36847f80181c9", "order": 2 },
+      { "adult": false, "gender": 2, "id": 1331, "known_for_department": "Acting", "name": "Hugo Weaving", "original_name": "Hugo Weaving", "popularity": 16.2, "profile_path": "/lSjEnjHkcSgZgRzrj1J5mfE2iJu.jpg", "cast_id": 37, "character": "Agent Smith", "credit_id": "52fe425bc3a36847f80181cd", "order": 3 },
+      { "adult": false, "gender": 2, "id": 9372, "known_for_department": "Acting", "name": "Marcus Chong", "original_name": "Marcus Chong", "popularity": 3.1, "profile_path": "/zqCvWEoOWzvEGLTKVHUnBz0gYrD.jpg", "cast_id": 39, "character": "Tank", "credit_id": "52fe425bc3a36847f80181d5", "order": 5 },
+      { "adult": false, "gender": 2, "id": 532, "known_for_department": "Acting", "name": "Joe Pantoliano", "original_name": "Joe Pantoliano", "popularity": 9.8, "profile_path": "/cXMOad9KKVBK1lg8EjEbcNPn1OT.jpg", "cast_id": 38, "character": "Cypher", "credit_id": "52fe425bc3a36847f80181d1", "order": 4 },
+      { "adult": false, "gender": 2, "id": 9374, "known_for_department": "Acting", "name": "Anthony Ray Parker", "original_name": "Anthony Ray Parker", "popularity": 2.2, "profile_path": "/vPgzhBHSqi6ruzT2TuLeHMfB4Nf.jpg", "cast_id": 41, "character": "Dozer", "credit_id": "52fe425bc3a36847f80181dd", "order": 6 },
+      { "adult": false, "gender": 2, "id": 9376, "known_for_department": "Acting", "name": "Paul Goddard", "original_name": "Paul Goddard", "popularity": 1.9, "profile_path": "/hpX8gYr79zQuyzwRBLOXqp3K3H1.jpg", "cast_id": 42, "character": "Agent Brown", "credit_id": "52fe425bc3a36847f80181e1", "order": 7 },
+      { "adult": false, "gender": 2, "id": 9377, "known_for_department": "Acting", "name": "Robert Taylor", "original_name": "Robert Taylor", "popularity": 3.4, "profile_path": "/n5Tw0wGeZjZsbE5akBLWRu3utd8.jpg", "cast_id": 43, "character": "Agent Jones", "credit_id": "52fe425bc3a36847f80181e5", "order": 8 },
+      { "adult": false, "gender": 1, "id": 9378, "known_for_department": "Acting", "name": "Gloria Foster", "original_name": "Gloria Foster", "popularity": 2.0, "profile_path": "/ahwiARgfOYctk6sOLBBk5w7cfH5.jpg", "cast_id": 44, "character": "Oracle", "credit_id": "52fe425bc3a36847f80181e9", "order": 9 },
+      { "adult": false, "gender": 1, "id": 9364, "known_for_department": "Acting", "name": "Julian Arahanga", "original_name": "Julian Arahanga", "popularity": 1.4, "profile_path": null, "cast_id": 40, "character": "Apoc", "credit_id": "52fe425bc3a36847f80181d9", "order": 10 },
+      { "adult": false, "gender": 1, "id": 9381, "known_for_department": "Acting", "name": "Belinda McClory", "original_name": "Belinda McClory", "popularity": 1.1, "profile_path": "/mNUWfvYGAKDP6UYrw6vT4nOQs4i.jpg", "cast_id": 45, "character": "Switch", "credit_id": "52fe425bc3a36847f80181ed", "order": 11 },
+      { "adult": false, "gender": 2, "id": 9380, "known_for_department": "Acting", "name": "Matt Doran", "original_name": "Matt Doran", "popularity": 1.6, "profile_path": "/5thH3YMGXx3Hm1T7Ir4dYyWpJKV.jpg", "cast_id": 46, "character": "Mouse", "credit_id": "52fe425bc3a36847f80181f1", "order": 12 },
+      { "adult": false, "gender": 1, "id": 1357063, "known_for_department": "Acting", "name": "Ada Nicodemou", "original_name": "Ada Nicodemou", "popularity": 2.9, "profile_path": "/f5Tf3gMFnp7oXYr6ki0K8xumMIN.jpg", "cast_id": 77, "character": "Choi", "credit_id": "5a33bc19925141062f0119cd", "order": 13 },
+      { "adult": false, "gender": 2, "id": 9383, "known_for_department": "Acting", "name": "Marc Aden Gray", "original_name": "Marc Aden Gray", "popularity": 0.6, "profile_path": "/4ny6O13WWwrJyLchcWvhGnsQvbd.jpg", "cast_id": 47, "character": "Dujour", "credit_id": "52fe425bc3a36847f80181f5", "order": 14 },
+      { "adult": false, "gender": 2, "id": 9384, "known_for_department": "Acting", "name": "David Aston", "original_name": "David Aston", "popularity": 0.9, "profile_path": "/qO6TVxS9aDRSXmVzTJlWBGLzFrQ.jpg", "cast_id": 48, "character": "Rhineheart", "credit_id": "52fe425bc3a36847f80181f9", "order": 15 },
+      { "adult": false, "gender": 2, "id": 9385, "known_for_department": "Acting", "name": "Marc Gray", "original_name": "Marc Gray", "popularity": 0.6, "profile_path": null, "cast_id": 49, "character": "Choi", "credit_id": "52fe425bc3a36847f80181fd", "order": 16 },
+      { "adult": false, "gender": 1, "id": 9386, "known_for_department": "Acting", "name": "Deni Gordon", "original_name": "Deni Gordon", "popularity": 0.6, "profile_path": null, "cast_id": 50, "character": "Priestess", "credit_id": "52fe425bc3a36847f8018201", "order": 17 },
+      { "adult": false, "gender": 2, "id": 9387, "known_for_department": "Acting", "name": "Rowan Witt", "original_name": "Rowan Witt", "popularity": 0.6, "profile_path": "/vWYxuBV7D3wgUcWwrS0EXiuwsMS.jpg", "cast_id": 51, "character": "Spoon Boy", "credit_id": "52fe425bc3a36847f8018205", "order": 18 },
+      { "adult": false, "gender": 2, "id": 9388, "known_for_department": "Acting", "name": "Bill Young", "original_name": "Bill Young", "popularity": 1.1, "profile_path": "/3dGmZ46SCvqF9ul5PzMm1tlKcpq.jpg", "cast_id": 52, "character": "Lieutenant", "credit_id": "52fe425bc3a36847f8018209", "order": 19 },
+      { "adult": false, "gender": 2, "id": 9389, "known_for_department": "Acting", "name": "Eleanor Witt", "original_name": "Eleanor Witt", "popularity": 0.4, "profile_path": null, "cast_id": 53, "character": "Potential", "credit_id": "52fe425bc3a36847f801820d", "order": 20 },
+      { "adult": false, "gender": 2, "id": 6384, "known_for_department": "Acting", "name": "Keanu Reeves", "original_name": "Keanu Reeves", "popularity": 50.1, "profile_path": "/4D0PpNI0kmP58hgrwGC3wCjxhnm.jpg", "cast_id": 99, "character": "Neo (voice)", "credit_id": "52fe425bc3a36847f80181c6", "order": 21 }
+    ],
+    "crew": [
+      { "adult": false, "gender": 1, "id": 9340, "known_for_department": "Directing", "name": "Lana Wachowski", "original_name": "Lana Wachowski", "popularity": 4.4, "profile_path": "/c7Elk9u1lWcmJNIcdsD5y4yT7xF.jpg", "credit_id": "52fe425bc3a36847f8018207", "department": "Directing", "job": "Director" },
+      { "adult": false, "gender": 1, "id": 9339, "known_for_department": "Directing", "name": "Lilly Wachowski", "original_name": "Lilly Wachowski", "popularity": 3.1, "profile_path": "/ezG2bCUpkTVONUapJuUTfMgVYqq.jpg", "credit_id": "52fe425bc3a36847f801820d", "department": "Directing", "job": "Director" },
+      { "adult": false, "gender": 2, "id": 1091, "known_for_department": "Production", "name": "Joel Silver", "original_name": "Joel Silver", "popularity": 2.8, "profile_path": "/ebK6pfHMg2DTaTwKZD9ngNGyx2N.jpg", "credit_id": "52fe425bc3a36847f8018213", "department": "Production", "job": "Producer" },
+      { "adult": false, "gender": 1, "id": 9340, "known_for_department": "Directing", "name": "Lana Wachowski", "original_name": "Lana Wachowski", "popularity": 4.4, "profile_path": "/c7Elk9u1lWcmJNIcdsD5y4yT7xF.jpg", "credit_id": "52fe425bc3a36847f80181f3", "department": "Writing", "job": "Writer" },
+      { "adult": false, "gender": 1, "id": 9339, "known_for_department": "Directing", "name": "Lilly Wachowski", "original_name": "Lilly Wachowski", "popularity": 3.1, "profile_path": "/ezG2bCUpkTVONUapJuUTfMgVYqq.jpg", "credit_id": "52fe425bc3a36847f80181f9", "department": "Writing", "job": "Writer" },
+      { "adult": false, "gender": 2, "id": 6745, "known_for_department": "Sound", "name": "Don Davis", "original_name": "Don Davis", "popularity": 1.5, "profile_path": "/dbNZNHzfjCzuPVOcMdfyjlpOdCN.jpg", "credit_id": "52fe425bc3a36847f8018219", "department": "Sound", "job": "Original Music Composer" },
+      { "adult": false, "gender": 2, "id": 9341, "known_for_department": "Camera", "name": "Bill Pope", "original_name": "Bill Pope", "popularity": 1.6, "profile_path": "/9g4xMOGYwRgdEFcSdcACWrvO3fw.jpg", "credit_id": "52fe425bc3a36847f801821f", "department": "Camera", "job": "Director of Photography" },
+      { "adult": false, "gender": 2, "id": 6332, "known_for_department": "Editing", "name": "Zach Staenberg", "original_name": "Zach Staenberg", "popularity": 0.9, "profile_path": null, "credit_id": "52fe425bc3a36847f8018225", "department": "Editing", "job": "Editor" },
+      { "adult": false, "gender": 2, "id": 1349971, "known_for_department": "Crew", "name": "Glenn Boswell", "original_name": "Glenn Boswell", "popularity": 0.7, "profile_path": null, "credit_id": "58d0302bc3a36806ed00b7a2", "department": "Crew", "job": "Stunt Coordinator" },
+      { "adult": false, "gender": 1, "id": 1404244, "known_for_department": "Makeup", "name": "Nikki Gooley", "original_name": "Nikki Gooley", "popularity": 0.6, "profile_path": null, "credit_id": "5a33f0c50e0a264cd1018a7a", "department": "Makeup", "job": "Makeup Artist" }
+    ]
+  },
+  "videos": {
+    "results": [
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Behind the Scenes: Bullet Time", "key": "bts000001", "site": "YouTube", "size": 1080, "type": "Behind the Scenes", "official": true, "published_at": "2021-11-01T16:00:00.000Z", "id": "618002ad3faba000622fd2b4" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "The Matrix (1999) Fan Trailer", "key": "fanTrailer01", "site": "YouTube", "size": 720, "type": "Trailer", "official": false, "published_at": "2011-07-13T05:13:47.000Z", "id": "533ec654c3a36854480003eb" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Official Trailer", "key": "vKQi3bBA1y8", "site": "YouTube", "size": 1080, "type": "Trailer", "official": true, "published_at": "2014-05-02T20:00:02.000Z", "id": "5c9294240e0a267cd516835f" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Teaser", "key": "teaser00001", "site": "YouTube", "size": 1080, "type": "Teaser", "official": true, "published_at": "1998-12-01T00:00:00.000Z", "id": "5c9294240e0a267cd5168360" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Re-release Trailer", "key": "rerelease01", "site": "YouTube", "size": 2160, "type": "Trailer", "official": true, "published_at": "2021-09-14T15:00:00.000Z", "id": "6140b7c1d6c300002b6dbbd8" },
+      { "iso_639_1": "fr", "iso_3166_1": "FR", "name": "Bande-annonce officielle (VF)", "key": "frTrailer01", "site": "YouTube", "size": 1080, "type": "Trailer", "official": true, "published_at": "2016-03-03T10:00:00.000Z", "id": "56d80e88c3a3681e4c00038b" },
+      { "iso_639_1": "en", "iso_3166_1": "US", "name": "Vimeo Trailer", "key": "123456789", "site": "Vimeo", "size": 1080, "type": "Trailer", "official": true, "published_at": "2015-01-01T00:00:00.000Z", "id": "5c9294240e0a267cd5168399" }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      { "aspect_ratio": 1.778, "height": 1080, "iso_639_1": "en", "file_path": "/l4QHerTSbMI7qgvasqxP36pqjN6.jpg", "vote_average": 5.6, "vote_count": 12, "width": 1920 },
+      { "aspect_ratio": 1.778, "height": 2160, "iso_639_1": null, "file_path": "/ncEsesgOJDNrTUED89hYbA117wo.jpg", "vote_average": 5.5, "vote_count": 10, "width": 3840 },
+      { "aspect_ratio": 1.778, "height": 1080, "iso_639_1": null, "file_path": "/7u3pxc0K1wx32IleAkLv78MKgrw.jpg", "vote_average": 5.9, "vote_count": 14, "width": 1920 }
+    ],
+    "logos": [
+      { "aspect_ratio": 4.29, "height": 466, "iso_639_1": "en", "file_path": "/ziRgmsbChgCaNzNSiaf5wHuGtb6.png", "vote_average": 5.3, "vote_count": 4, "width": 2000 },
+      { "aspect_ratio": 4.29, "height": 233, "iso_639_1": "en", "file_path": "/vZB5ldQMLpgmOSWvHYXSMZFbqhy.svg", "vote_average": 5.7, "vote_count": 6, "width": 1000 },
+      { "aspect_ratio": 4.0, "height": 250, "iso_639_1": "fr", "file_path": "/frLogoMatrix0001.png", "vote_average": 5.2, "vote_count": 2, "width": 1000 },
+      { "aspect_ratio": 3.9, "height": 256, "iso_639_1": null, "file_path": "/textlessLogo01.png", "vote_average": 6.4, "vote_count": 3, "width": 1000 },
+      { "aspect_ratio": 3.9, "height": 256, "iso_639_1": "ja", "file_path": "/jaLogoMatrix0001.png", "vote_average": 9.0, "vote_count": 9, "width": 1000 }
+    ],
+    "posters": [
+      { "aspect_ratio": 0.667, "height": 3000, "iso_639_1": "en", "file_path": "/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg", "vote_average": 5.8, "vote_count": 40, "width": 2000 }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      { "iso_3166_1": "DE", "release_dates": [ { "certification": "16", "descriptors": [], "iso_639_1": "", "note": "", "release_date": "1999-06-17T00:00:00.000Z", "type": 3 } ] },
+      { "iso_3166_1": "US", "release_dates": [
+          { "certification": "", "descriptors": [], "iso_639_1": "", "note": "Premiere", "release_date": "1999-03-24T00:00:00.000Z", "type": 1 },
+          { "certification": "PG-13", "descriptors": [], "iso_639_1": "", "note": "TV edit", "release_date": "2001-01-01T00:00:00.000Z", "type": 6 },
+          { "certification": "R", "descriptors": [], "iso_639_1": "", "note": "", "release_date": "1999-03-31T00:00:00.000Z", "type": 3 },
+          { "certification": "R", "descriptors": [], "iso_639_1": "", "note": "4K", "release_date": "2018-05-22T00:00:00.000Z", "type": 5 }
+      ] }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      { "id": 83, "name": "saving the world" },
+      { "id": 310, "name": "artificial intelligence (a.i.)" },
+      { "id": 312, "name": "man vs machine" },
+      { "id": 490, "name": "philosophy" },
+      { "id": 4565, "name": "dystopia" },
+      { "id": 12190, "name": "cyberpunk" },
+      { "id": 4565, "name": "dystopia" }
+    ]
+  },
+  "recommendations": {
+    "page": 1,
+    "results": [
+      { "adult": false, "id": 604, "title": "The Matrix Reloaded", "media_type": "movie", "popularity": 40.2 },
+      { "adult": false, "id": 605, "title": "The Matrix Revolutions", "media_type": "movie", "popularity": 36.0 },
+      { "adult": false, "id": 1891, "title": "The Empire Strikes Back", "media_type": "movie", "popularity": 30.5 }
+    ],
+    "total_pages": 2,
+    "total_results": 40
+  },
+  "similar": {
+    "page": 1,
+    "results": [
+      { "adult": false, "id": 1858, "title": "Transformers", "popularity": 60.1 },
+      { "adult": false, "id": 2048, "title": "I, Robot", "popularity": 33.3 }
+    ],
+    "total_pages": 1,
+    "total_results": 2
+  },
+  "external_ids": {
+    "imdb_id": "tt0133093",
+    "wikidata_id": "Q83495",
+    "facebook_id": "TheMatrixMovie",
+    "instagram_id": null,
+    "twitter_id": null
+  }
+}

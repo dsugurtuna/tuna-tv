@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<tv generator-info-name="epg.example.net" source-info-name="Example EPG">
+  <channel id="BBCOne.uk"><display-name lang="en">BBC One</display-name><icon src="http://logos.example.net/bbc1.png"/></channel>
+  <channel id="trt1.tr"><display-name>TRT 1</display-name></channel>
+  <programme start="20261106180000 +0000" stop="20261106183000 +0000" channel="BBCOne.uk">
+    <title lang="en">BBC News at Six</title>
+    <desc lang="en">The latest national and international news &amp; weather.</desc>
+    <category lang="en">News</category>
+    <icon src="http://img.example.net/news.png"/>
+  </programme>
+  <programme start="20261106183000 +0000" stop="20261106190000 +0000" channel="BBCOne.uk">
+    <title lang="en">EastEnders</title>
+    <title lang="cy">EastEnders (Cymraeg)</title>
+    <sub-title lang="en">Episode 7012</sub-title>
+    <desc lang="en">Drama in Walford.</desc>
+    <category lang="en">Drama</category>
+    <category lang="en">Soap</category>
+    <episode-num system="xmltv_ns">40.11.0/1</episode-num>
+    <episode-num system="onscreen">S41 E12</episode-num>
+    <new/>
+  </programme>
+  <programme start="20261106203000 +0300" stop="20261106220000 +0300" channel="trt1.tr">
+    <title lang="tr">Kuruluş Osman</title>
+    <desc lang="tr"><![CDATA[Osman Bey'in mücadelesi sürüyor.]]></desc>
+    <episode-num system="onscreen">S07E05</episode-num>
+  </programme>
+  <programme start="20261106220000 +0300" stop="20261107000000 +0300" channel="trt1.tr">
+    <title>Süper Lig: Galatasaray - Fenerbahçe</title>
+    <category>Sports</category>
+    <live/>
+  </programme>
+  <programme start="20261106190000 +0000" channel="BBCOne.uk">
+    <title>A Question of Sport</title>
+  </programme>
+  <programme start="20261106200000 +0000" stop="20261106210000 +0000" channel="BBCOne.uk">
+    <title>The Apprentice</title>
+    <desc>Business&nbsp;drama &copy; BBC</desc>
+  </programme>
+  <programme start="20261106200000" stop="20261106210000" channel="other.ch">
+    <title>Other Channel Show</title>
+  </programme>
+  <programme start="20261108120000 +0000" stop="20261108130000 +0000" channel="BBCOne.uk">
+    <title>Far Future</title>
+  </programme>
+  <programme start="20261106180000 +0000" stop="20261106183000 +0000" channel="BBCOne.uk">
+    <title>Duplicate News</title>
+  </programme>
+</tv>

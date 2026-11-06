@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": ["Keanu Charles Reeves", "키아누 리브스"],
+  "biography": "Keanu Charles Reeves is a Canadian actor. Reeves is known for his roles in Bill & Ted's Excellent Adventure, Speed, Point Break, and The Matrix franchise as Neo.",
+  "birthday": "1964-09-02",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 6384,
+  "imdb_id": "nm0000206",
+  "known_for_department": "Acting",
+  "name": "Keanu Reeves",
+  "place_of_birth": "Beirut, Lebanon",
+  "popularity": 49.987,
+  "profile_path": "/4D0PpNI0kmP58hgrwGC3wCjxhnm.jpg",
+  "combined_credits": {
+    "cast": [
+      { "adult": false, "backdrop_path": "/ncEsesgOJDNrTUED89hYbA117wo.jpg", "genre_ids": [28, 878], "id": 603, "original_language": "en", "original_title": "The Matrix", "overview": "", "popularity": 81.6, "poster_path": "/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg", "release_date": "1999-03-31", "title": "The Matrix", "video": false, "vote_average": 8.2, "vote_count": 26412, "character": "Thomas A. Anderson / Neo", "credit_id": "52fe425bc3a36847f80181c5", "order": 0, "media_type": "movie" },
+      { "adult": false, "genre_ids": [28, 53, 80], "id": 245891, "original_language": "en", "original_title": "John Wick", "popularity": 120.4, "release_date": "2014-10-22", "title": "John Wick", "vote_average": 7.4, "vote_count": 19000, "character": "John Wick", "credit_id": "54d0c0d2c3a36806e1001c14", "order": 0, "media_type": "movie" },
+      { "adult": false, "genre_ids": [28, 878], "id": 604, "original_language": "en", "original_title": "The Matrix Reloaded", "popularity": 40.2, "release_date": "2003-05-15", "title": "The Matrix Reloaded", "vote_average": 7.0, "vote_count": 10500, "character": "Neo", "credit_id": "52fe425cc3a36847f80182b1", "order": 0, "media_type": "movie" },
+      { "adult": false, "genre_ids": [10767, 35], "id": 59941, "origin_country": ["US"], "original_language": "en", "original_name": "The Tonight Show Starring Jimmy Fallon", "popularity": 150.0, "first_air_date": "2014-02-17", "name": "The Tonight Show Starring Jimmy Fallon", "vote_average": 5.8, "vote_count": 300, "character": "Self - Guest", "credit_id": "5e2e1c3a0c27100016b5e1d0", "episode_count": 3, "media_type": "tv" },
+      { "adult": false, "genre_ids": [99], "id": 1220917, "origin_country": ["US"], "original_language": "en", "original_name": "Celebrity Documentary", "popularity": 2.0, "first_air_date": "2019-01-01", "name": "Celebrity Documentary", "vote_average": 5.0, "vote_count": 3, "character": "Himself", "credit_id": "5e2e1c3a0c27100016b5e1d1", "episode_count": 1, "media_type": "tv" },
+      { "adult": false, "genre_ids": [16, 10765], "id": 222766, "origin_country": ["US"], "original_language": "en", "original_name": "Toy Story Fan Series", "popularity": 12.5, "first_air_date": "2023-06-01", "name": "Toy Story Fan Series", "vote_average": 7.1, "vote_count": 40, "character": "Duke Caboom (voice)", "credit_id": "5e2e1c3a0c27100016b5e1d2", "episode_count": 8, "media_type": "tv" },
+      { "adult": false, "genre_ids": [35, 18], "id": 67221, "origin_country": ["US"], "original_language": "en", "original_name": "Swedish Dicks", "popularity": 8.0, "first_air_date": "2016-08-01", "name": "Swedish Dicks", "vote_average": 6.1, "vote_count": 25, "character": "Tex", "credit_id": "5e2e1c3a0c27100016b5e1d3", "episode_count": 3, "media_type": "tv" }
+    ],
+    "crew": [
+      { "adult": false, "genre_ids": [28, 53, 80], "id": 245891, "original_language": "en", "original_title": "John Wick", "popularity": 120.4, "release_date": "2014-10-22", "title": "John Wick", "credit_id": "5c6a8b1a0e0a2603e4a8f9c3", "department": "Production", "job": "Executive Producer", "media_type": "movie" },
+      { "adult": false, "genre_ids": [99], "id": 157353, "original_language": "en", "original_title": "Side by Side", "popularity": 6.0, "release_date": "2012-08-19", "title": "Side by Side", "credit_id": "52fe4bb5c3a36847f820b4c1", "department": "Production", "job": "Producer", "media_type": "movie" }
+    ]
+  }
+}

@@ -1,0 +1,506 @@
+[
+ {
+  "id": "BBCOne.uk",
+  "name": "BBC One",
+  "alt_names": [
+   "BBC1",
+   "BBC Television",
+   "BBC Television Service"
+  ],
+  "network": "BBC Television",
+  "owners": [
+   "BBC"
+  ],
+  "country": "UK",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1936-11-02",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.bbc.co.uk/bbcone/"
+ },
+ {
+  "id": "BBCTwo.uk",
+  "name": "BBC Two",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "BBC"
+  ],
+  "country": "UK",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1964-04-21",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.bbc.co.uk/bbctwo/"
+ },
+ {
+  "id": "BBCFour.uk",
+  "name": "BBC Four",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "BBC"
+  ],
+  "country": "UK",
+  "categories": [
+   "documentary",
+   "culture"
+  ],
+  "is_nsfw": false,
+  "launched": "2002-03-02",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.bbc.co.uk/bbcfour/"
+ },
+ {
+  "name": "No Id Channel",
+  "country": "US"
+ },
+ {
+  "id": "BBCNews.uk",
+  "name": "BBC News",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "BBC Studios"
+  ],
+  "country": "UK",
+  "categories": [
+   "news"
+  ],
+  "is_nsfw": false,
+  "launched": "1997-11-09",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.bbc.co.uk/tv/bbcnews"
+ },
+ {
+  "id": "BBCHD.uk",
+  "name": "BBC HD",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "BBC"
+  ],
+  "country": "UK",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": null,
+  "closed": "2013-03-25",
+  "replaced_by": "BBCTwo.uk@HD",
+  "website": "http://www.bbchd.com/"
+ },
+ {
+  "id": "BBC.jp",
+  "name": "BBC",
+  "alt_names": [
+   "びわ湖放送",
+   "Biwako Broadcasting"
+  ],
+  "network": "JAITS",
+  "owners": [
+   "Biwako Broadcasting Co. Ltd."
+  ],
+  "country": "JP",
+  "categories": [],
+  "is_nsfw": false,
+  "launched": "1972-04-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.bbc-tv.co.jp/"
+ },
+ {
+  "id": "CNN.us",
+  "name": "CNN",
+  "alt_names": [],
+  "network": "Cable News Network",
+  "owners": [
+   "Skydance Corporation"
+  ],
+  "country": "US",
+  "categories": [
+   "news"
+  ],
+  "is_nsfw": false,
+  "launched": "1980-06-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.cnn.com/"
+ },
+ {
+  "id": "CNNInternational.us",
+  "name": "CNN International",
+  "alt_names": [
+   "CNNi"
+  ],
+  "network": "Cable News Network",
+  "owners": [
+   "Skydance Corporation"
+  ],
+  "country": "US",
+  "categories": [
+   "news"
+  ],
+  "is_nsfw": false,
+  "launched": "1985-09-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://edition.cnn.com/"
+ },
+ {
+  "id": "Fox.us",
+  "name": "Fox",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Fox Entertainment"
+  ],
+  "country": "US",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1986-10-09",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.fox.com/"
+ },
+ {
+  "id": "Fox.tr",
+  "name": "Fox",
+  "alt_names": [
+   "FOX Türkiye",
+   " FOX TV"
+  ],
+  "network": null,
+  "owners": [
+   "The Walt Disney Company"
+  ],
+  "country": "TR",
+  "categories": [
+   "entertainment"
+  ],
+  "is_nsfw": false,
+  "launched": "2007-02-24",
+  "closed": "2024-02-12",
+  "replaced_by": "NOW.tr",
+  "website": "http://fox.com.tr/"
+ },
+ {
+  "id": "Fox.de",
+  "name": "Fox",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Fox Networks Group Germany GmbH"
+  ],
+  "country": "DE",
+  "categories": [
+   "entertainment"
+  ],
+  "is_nsfw": false,
+  "launched": "2008-05-19",
+  "closed": "2021-10-01",
+  "replaced_by": null,
+  "website": "https://www.foxchannel.de"
+ },
+ {
+  "id": "TRT1.tr",
+  "name": "TRT 1",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "TRT"
+  ],
+  "country": "TR",
+  "categories": [],
+  "is_nsfw": false,
+  "launched": "1968-01-31",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.trt1.com.tr/"
+ },
+ {
+  "id": "ShowTV.tr",
+  "name": "Show TV",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Albayrak Holding"
+  ],
+  "country": "TR",
+  "categories": [],
+  "is_nsfw": false,
+  "launched": null,
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.showtv.com.tr/"
+ },
+ {
+  "id": "SkySportsMainEvent.uk",
+  "name": "Sky Sports Main Event",
+  "alt_names": [],
+  "network": null,
+  "owners": [],
+  "country": "UK",
+  "categories": [
+   "sports"
+  ],
+  "is_nsfw": false,
+  "launched": null,
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.skysports.com/"
+ },
+ {
+  "id": "SkySportsMainEvent.ie",
+  "name": "Sky Sports Main Event",
+  "alt_names": [],
+  "network": null,
+  "owners": [],
+  "country": "IE",
+  "categories": [
+   "sports"
+  ],
+  "is_nsfw": false,
+  "launched": null,
+  "closed": null,
+  "replaced_by": null,
+  "website": null
+ },
+ {
+  "id": "SkySportsF1.uk",
+  "name": "Sky Sports F1",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Sky Group"
+  ],
+  "country": "UK",
+  "categories": [
+   "sports"
+  ],
+  "is_nsfw": false,
+  "launched": "2012-03-09",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.skysports.com/f1"
+ },
+ {
+  "id": "E4.uk",
+  "name": "E4",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Channel Four Television Corporation"
+  ],
+  "country": "UK",
+  "categories": [
+   "entertainment"
+  ],
+  "is_nsfw": false,
+  "launched": "2001-01-18",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.channel4.com/collection/e4"
+ },
+ {
+  "id": "TF1.fr",
+  "name": "TF1",
+  "alt_names": [
+   "Télévision française 1"
+  ],
+  "network": null,
+  "owners": [],
+  "country": "FR",
+  "categories": [
+   "entertainment"
+  ],
+  "is_nsfw": false,
+  "launched": "1975-01-06",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.tf1.fr"
+ },
+ {
+  "id": "CanalPlus.fr",
+  "name": "Canal+",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Vivendi"
+  ],
+  "country": "FR",
+  "categories": [
+   "entertainment"
+  ],
+  "is_nsfw": false,
+  "launched": "1984-11-04",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.canalplus.com/"
+ },
+ {
+  "id": "ZDF.de",
+  "name": "ZDF",
+  "alt_names": [],
+  "network": null,
+  "owners": [],
+  "country": "DE",
+  "categories": [],
+  "is_nsfw": false,
+  "launched": "1963-04-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.zdf.de/"
+ },
+ {
+  "id": "DasErste.de",
+  "name": "Das Erste",
+  "alt_names": [
+   "ARD",
+   "Erstes Deutsches Fernsehen",
+   "Deutsches Fernsehen",
+   "NWDR Fernsehen",
+   "NWD Fernsehrundfunk",
+   "Fernsehsender Paul Nipkow"
+  ],
+  "network": null,
+  "owners": [
+   "ARD"
+  ],
+  "country": "DE",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1952-12-25",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.daserste.de/"
+ },
+ {
+  "id": "Rai1.it",
+  "name": "Rai 1",
+  "alt_names": [
+   "Rai Uno",
+   "Rete 1",
+   "TV1",
+   "Programma Nazionale",
+   "ReteTV"
+  ],
+  "network": null,
+  "owners": [
+   "Rai"
+  ],
+  "country": "IT",
+  "categories": [],
+  "is_nsfw": false,
+  "launched": "1954-01-03",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.rai.it/rai1/"
+ },
+ {
+  "id": "beINSports1.qa",
+  "name": "beIN Sports 1",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "beIN Media Group"
+  ],
+  "country": "QA",
+  "categories": [
+   "sports"
+  ],
+  "is_nsfw": false,
+  "launched": "2015-11-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.beinsports.com/ar/"
+ },
+ {
+  "id": "beINSports2.qa",
+  "name": "beIN Sports 2",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "beIN Media Group"
+  ],
+  "country": "QA",
+  "categories": [
+   "sports"
+  ],
+  "is_nsfw": false,
+  "launched": "2015-11-01",
+  "closed": null,
+  "replaced_by": null,
+  "website": "http://www.beinsports.com/ar/"
+ },
+ {
+  "id": "Channel4.uk",
+  "name": "Channel 4",
+  "alt_names": [],
+  "network": null,
+  "owners": [
+   "Channel Four Television Corporation"
+  ],
+  "country": "UK",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1982-11-02",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.channel4.com/"
+ },
+ {
+  "id": "ITV1.uk",
+  "name": "ITV1",
+  "alt_names": [
+   "ITV"
+  ],
+  "network": "ITV",
+  "owners": [
+   "ITV plc"
+  ],
+  "country": "UK",
+  "categories": [
+   "general"
+  ],
+  "is_nsfw": false,
+  "launched": "1955-09-22",
+  "closed": null,
+  "replaced_by": null,
+  "website": "https://www.itv.com/hub/itv"
+ },
+ {
+  "id": "LegacyTV.us",
+  "name": "Legacy TV",
+  "alt_names": "Legacy;Legacy Television",
+  "network": null,
+  "owners": [],
+  "country": "US",
+  "categories": "general",
+  "is_nsfw": "FALSE",
+  "launched": null,
+  "closed": null,
+  "replaced_by": null,
+  "website": null,
+  "logo": "https://example.org/legacy.png",
+  "languages": [
+   "eng"
+  ],
+  "subdivision": null
+ },
+ "not an object"
+]

@@ -1,0 +1,380 @@
+[
+ {
+  "channel": "BBC.jp",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 152,
+  "height": 152,
+  "format": "PNG",
+  "url": "https://www.bbc-tv.co.jp/images_rw2024/common/icon_apple_touch.png"
+ },
+ {
+  "channel": "BBCFour.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 486,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/BBC_Four_logo_2021.svg/960px-BBC_Four_logo_2021.svg.png"
+ },
+ {
+  "channel": "BBCHD.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 512,
+  "height": 143,
+  "format": "PNG",
+  "url": "https://i.imgur.com/tJfHhMd.png"
+ },
+ {
+  "channel": "BBCNews.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 720,
+  "height": 540,
+  "format": "PNG",
+  "url": "https://dtil.tmsimg.com/assets/s158142_ld_h15_aa.png?lock=720x540"
+ },
+ {
+  "channel": "BBCNews.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 576,
+  "height": 369,
+  "format": "PNG",
+  "url": "https://i.imgur.com/vSz2WEp.png"
+ },
+ {
+  "channel": "BBCNews.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 2000,
+  "height": 1225,
+  "format": "PNG",
+  "url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/BBC-logo_2000_X_1125_Transparent.png"
+ },
+ {
+  "channel": "BBCNews.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 577,
+  "height": 416,
+  "format": "PNG",
+  "url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png"
+ },
+ {
+  "channel": "BBCOne.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 626,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BBC_One_logo_2021.svg/960px-BBC_One_logo_2021.svg.png"
+ },
+ {
+  "channel": "BBCTwo.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 544,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/BBC_Two_logo_2021.svg/960px-BBC_Two_logo_2021.svg.png"
+ },
+ {
+  "channel": "beINSports1.qa",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 576,
+  "height": 338,
+  "format": "PNG",
+  "url": "https://i.imgur.com/Vtk2cGI.png"
+ },
+ {
+  "channel": "beINSports2.qa",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 576,
+  "height": 338,
+  "format": "PNG",
+  "url": "https://i.imgur.com/vUJZSvs.png"
+ },
+ {
+  "channel": "CanalPlus.fr",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 576,
+  "height": 104,
+  "format": "PNG",
+  "url": "https://i.imgur.com/5HcyMnW.png"
+ },
+ {
+  "channel": "Channel4.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 379,
+  "height": 512,
+  "format": "PNG",
+  "url": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1621.png"
+ },
+ {
+  "channel": "CNN.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 376,
+  "height": 288,
+  "format": "PNG",
+  "url": "https://jiotvimages.cdn.jio.com/dare_images/images/CNN.png"
+ },
+ {
+  "channel": "CNN.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 458,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/960px-CNN.svg.png"
+ },
+ {
+  "channel": "CNNInternational.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 292,
+  "height": 175,
+  "format": "PNG",
+  "url": "https://i.imgur.com/dfxefQw.png"
+ },
+ {
+  "channel": "CNNInternational.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 596,
+  "format": "PNG",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CNN-International-Logo.svg/960px-CNN-International-Logo.svg.png"
+ },
+ {
+  "channel": "DasErste.de",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 960,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/ARD_Dachmarke_2014.svg/960px-ARD_Dachmarke_2014.svg.png"
+ },
+ {
+  "channel": "E4.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 371,
+  "height": 512,
+  "format": "PNG",
+  "url": "https://i.imgur.com/22MfjF4.png"
+ },
+ {
+  "channel": "Fox.de",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 511,
+  "height": 221,
+  "format": "PNG",
+  "url": "https://i.imgur.com/kXoadQC.png"
+ },
+ {
+  "channel": "Fox.tr",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 414,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/960px-FOX_wordmark-red.svg.png"
+ },
+ {
+  "channel": "ITV1.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 512,
+  "height": 189,
+  "format": "PNG",
+  "url": "https://i.imgur.com/xwPekCF.png"
+ },
+ {
+  "channel": "Rai1.it",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 728,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rai_1_-_Logo_2016.svg/960px-Rai_1_-_Logo_2016.svg.png"
+ },
+ {
+  "channel": "ShowTV.tr",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 490,
+  "height": 485,
+  "format": "PNG",
+  "url": "https://i.imgur.com/1l7SCCu.png"
+ },
+ {
+  "channel": "SkySportsF1.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 512,
+  "height": 76,
+  "format": "PNG",
+  "url": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1306.png"
+ },
+ {
+  "channel": "SkySportsMainEvent.ie",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 512,
+  "height": 58,
+  "format": "PNG",
+  "url": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1301.png"
+ },
+ {
+  "channel": "SkySportsMainEvent.uk",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 512,
+  "height": 58,
+  "format": "PNG",
+  "url": "https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1301.png"
+ },
+ {
+  "channel": "TF1.fr",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 271,
+  "height": 270,
+  "format": "PNG",
+  "url": "https://i.imgur.com/QxHt9NC.png"
+ },
+ {
+  "channel": "TRT1.tr",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 315,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png"
+ },
+ {
+  "channel": "ZDF.de",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 509,
+  "height": 298,
+  "format": "PNG",
+  "url": "https://i.imgur.com/rtLb6m9.png"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": "KRIV",
+  "in_use": true,
+  "tags": [],
+  "width": 2192,
+  "height": 1230,
+  "format": "JPEG",
+  "url": "https://i.imgur.com/AZ8MWRp.jpg"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": "KTVI",
+  "in_use": true,
+  "tags": [],
+  "width": 3181,
+  "height": 945,
+  "format": "SVG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/KTVI_Fox_2_%282020%29.svg"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 440,
+  "height": 183,
+  "format": "PNG",
+  "url": "https://imgx.fubo.tv/station_logos/fox_c.png"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 960,
+  "height": 414,
+  "format": "PNG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/960px-FOX_wordmark-red.svg.png"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": null,
+  "in_use": false,
+  "tags": [],
+  "width": 2000,
+  "height": 900,
+  "format": "PNG",
+  "url": "https://example.org/fox-retired-wide.png"
+ },
+ {
+  "channel": "Fox.us",
+  "feed": null,
+  "in_use": true,
+  "tags": [],
+  "width": 1200,
+  "height": 500,
+  "format": "SVG",
+  "url": "https://example.org/fox-wide.svg"
+ },
+ {
+  "channel": "TRT1.tr",
+  "feed": null,
+  "in_use": "TRUE",
+  "tags": [],
+  "width": "100",
+  "height": 40,
+  "format": "PNG",
+  "url": "https://example.org/trt1-small.png"
+ },
+ {
+  "channel": "BBCOne.uk",
+  "feed": null,
+  "in_use": true,
+  "width": 1,
+  "height": 1,
+  "format": "PNG"
+ }
+]

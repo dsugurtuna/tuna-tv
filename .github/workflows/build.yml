@@ -1,0 +1,166 @@
+name: Build
+
+on:
+  push:
+    branches: [main, 'claude/**', 'dev/**']
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  core-linux:
+    name: TunaCore tests (Linux)
+    runs-on: ubuntu-latest
+    container: swift:6.2-noble
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: swift test
+        run: |
+          set -o pipefail
+          swift test --package-path Packages/TunaCore 2>&1 | tee coretests.log | grep -E "error:|failed|Executed .* tests" | tail -60
+
+  macos:
+    name: macOS app (Xcode 26)
+    runs-on: macos-26
+    timeout-minutes: 90
+    env:
+      SPM_DIR: ${{ github.workspace }}/build/SourcePackages
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_26.6.app 2>/dev/null || true
+          xcodebuild -version
+          swift --version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Cache Swift packages
+        uses: actions/cache@v4
+        with:
+          path: build/SourcePackages
+          key: spm-${{ runner.os }}-${{ hashFiles('project.yml', 'Packages/*/Package.swift') }}
+          restore-keys: spm-${{ runner.os }}-
+
+      - name: Generate Xcode project
+        run: xcodegen generate --spec project.yml
+
+      - name: Resolve packages
+        run: |
+          xcodebuild -resolvePackageDependencies -project TunaTV.xcodeproj -scheme TunaTV \
+            -clonedSourcePackagesDirPath "$SPM_DIR" -skipPackagePluginValidation -skipMacroValidation | tail -20
+
+      - name: Type-check app (no engine, fast)
+        run: |
+          set -o pipefail
+          xcodebuild build -project TunaTV.xcodeproj -scheme TunaTVCheck -configuration Debug \
+            -destination 'generic/platform=macOS' -derivedDataPath build/check \
+            -clonedSourcePackagesDirPath "$SPM_DIR" -skipPackagePluginValidation -skipMacroValidation \
+            CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO COMPILER_INDEX_STORE_ENABLE=NO \
+            2>&1 | tee check.log | xcbeautify --quiet --renderer github-actions
+
+      - name: Build app (Release, with AetherEngine)
+        run: |
+          set -o pipefail
+          xcodebuild build -project TunaTV.xcodeproj -scheme TunaTV -configuration Release \
+            -destination 'generic/platform=macOS' -derivedDataPath build/dd \
+            -clonedSourcePackagesDirPath "$SPM_DIR" -skipPackagePluginValidation -skipMacroValidation \
+            CODE_SIGN_IDENTITY=- COMPILER_INDEX_STORE_ENABLE=NO \
+            2>&1 | tee build.log | xcbeautify --quiet --renderer github-actions
+
+      - name: Compiler errors (if any)
+        if: failure()
+        run: |
+          for f in check.log build.log coretests.log; do
+            [ -f "$f" ] || continue
+            echo "==== ERRORS in $f ===="
+            grep -E "(error|fatal error):" "$f" | sort -u | head -300 || true
+          done
+
+      - name: Locate app
+        id: app
+        run: |
+          APP="$(find build/dd/Build/Products/Release -maxdepth 1 -name '*.app' | head -1)"
+          echo "path=$APP" >> "$GITHUB_OUTPUT"
+          BIN="$(find "$APP/Contents/MacOS" -type f -perm -111 | head -1)"
+          echo "bin=$BIN" >> "$GITHUB_OUTPUT"
+          ls -la "$APP/Contents/MacOS" "$APP/Contents/Frameworks" 2>/dev/null || true
+          otool -L "$BIN" | head -40
+          for dep in $(otool -L "$BIN" | awk '/@rpath\//{print $1}'); do
+            test -e "$APP/Contents/Frameworks/${dep#@rpath/}" || { echo "UNRESOLVED $dep"; exit 1; }
+          done
+          codesign --verify --deep --strict "$APP" && echo "signature ok"
+
+      - name: Self-test
+        run: '"${{ steps.app.outputs.bin }}" --self-test 2>&1 | tail -60'
+
+      - name: UI snapshots (demo library)
+        run: |
+          mkdir -p snapshots
+          "${{ steps.app.outputs.bin }}" --snapshots "$PWD/snapshots" 2>&1 | tail -60 || echo "snapshot run failed"
+          ls -la snapshots
+
+      - name: Upload snapshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots
+          path: snapshots
+          if-no-files-found: ignore
+
+      - name: Publish snapshots branch
+        if: github.event_name == 'push'
+        run: |
+          [ -n "$(ls -A snapshots 2>/dev/null)" ] || exit 0
+          SRC_SHA="$(git rev-parse --short HEAD)"
+          TMP="$(mktemp -d)"
+          cp -R snapshots/. "$TMP/"
+          cd "$TMP"
+          git init -q -b ci-snapshots
+          git config user.name "tuna-ci"
+          git config user.email "tuna-ci@users.noreply.github.com"
+          echo "Snapshots from ${GITHUB_REF_NAME} @ ${SRC_SHA}" > README.md
+          git add -A && git commit -q -m "Snapshots for ${GITHUB_REF_NAME} @ ${SRC_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-snapshots
+
+      - name: Package DMG
+        run: bash scripts/make-dmg.sh "${{ steps.app.outputs.path }}" "dist/TunaTV-macOS.dmg"
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: TunaTV-macOS
+          path: dist/TunaTV-macOS.dmg
+
+      - name: TunaCore tests (macOS)
+        run: |
+          set -o pipefail
+          swift test --package-path Packages/TunaCore 2>&1 | tee coretests.log | grep -E "error:|failed|Executed .* tests" | tail -80
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/claude/sharp-curie-yjsflm'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'v2.0.0' }}
+          name: Tuna TV 2.0.0
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          files: dist/TunaTV-macOS.dmg
+          body: |
+            **Tuna TV 2.0.0: arguably the best IPTV app for macOS. Free forever.**
+
+            Download `TunaTV-macOS.dmg`, drag Tuna TV to Applications. It is not notarized, so run once:
+            `xattr -dr com.apple.quarantine "/Applications/Tuna TV.app"`
+
+            Requires macOS 15+ on Apple Silicon. Bring your own Xtream Codes or M3U subscription, or try the built-in demo.
