@@ -10,25 +10,45 @@ public enum NameParser {
     /// Examples: "EN| The Matrix (1999) 4K" -> title "The Matrix", year 1999, quality .uhd, languages ["en"].
     ///           "|TR| Kurtlar Vadisi S01 E05" -> title "Kurtlar Vadisi", season 1, episode 5, languages ["tr"].
     ///           "UK: BBC One FHD (Backup)" -> title "BBC One", quality .fhd, countries ["GB"], isBackup.
-    public static func parse(_ name: String, kind: StreamKind, category: CategoryHints? = nil) -> ParsedName { fatalError("TODO(curation)") }
+    public static func parse(_ name: String, kind: StreamKind, category: CategoryHints? = nil) -> ParsedName {
+        NameParserEngine.parse(name, kind: kind, category: category)
+    }
+}
+
+extension NameParser {
+    /// Parses many names of one kind; large batches use all cores. Results are in input order (deterministic).
+    public static func parseAll(_ names: [String], kind: StreamKind, category: CategoryHints? = nil) -> [ParsedName] {
+        ParallelMap.map(count: names.count) { NameParserEngine.parse(names[$0], kind: kind, category: category) }
+    }
 }
 
 public enum CategoryParser {
     /// "EN | MOVIES 4K" -> cleanName "Movies", languages ["en"], quality .uhd. "XXX | Adult" -> isAdult.
-    public static func parse(_ name: String, kind: StreamKind) -> CategoryHints { fatalError("TODO(curation)") }
+    public static func parse(_ name: String, kind: StreamKind) -> CategoryHints {
+        CategoryParsing.parse(name, kind: kind)
+    }
 }
 
 public enum TitleKey {
     /// Canonical dedupe key: folded case/diacritics (Turkish ı/İ -> i), '&' -> "and", punctuation removed,
     /// leading article dropped (the/a/an/der/die/das/le/la/les/el/los/il), roman numerals II..X -> digits,
     /// whitespace collapsed. "The Lord of the Rings: The Two Towers" -> "lord of the rings the two towers".
-    public static func make(_ title: String) -> String { fatalError("TODO(curation)") }
+    public static func make(_ title: String) -> String {
+        TitleKeyBuilder.make(title, live: false)
+    }
+
+    /// Kind-aware variant: live channel keys keep leading articles and numerals ("La 1", "Das Erste").
+    public static func make(_ title: String, kind: StreamKind) -> String {
+        TitleKeyBuilder.make(title, live: kind == .live)
+    }
 }
 
 public enum ScriptDetector {
     /// Language implied by the dominant non-Latin script, if any: Arabic -> "ar", Cyrillic -> "ru",
     /// Greek -> "el", Hebrew -> "he", Hangul -> "ko", Kana -> "ja", Han -> "zh", Devanagari -> "hi", Thai -> "th".
-    public static func languageHint(for text: String) -> String? { fatalError("TODO(curation)") }
+    public static func languageHint(for text: String) -> String? {
+        ScriptDetection.hint(text)
+    }
 }
 
 public struct CountryInfo: Codable, Hashable, Sendable, Identifiable {
@@ -70,15 +90,15 @@ public struct LanguageInfo: Codable, Hashable, Sendable, Identifiable {
 /// Countries and languages for the "Choose your worlds" picker and for flag rendering.
 public enum WorldDirectory {
     /// ~120 countries commonly seen in IPTV catalogs, sorted by English name.
-    public static var countries: [CountryInfo] { fatalError("TODO(curation)") }
+    public static var countries: [CountryInfo] { WorldData.countries }
     /// ~60 languages commonly seen in IPTV catalogs, sorted by English name.
-    public static var languages: [LanguageInfo] { fatalError("TODO(curation)") }
-    public static func country(_ code: String) -> CountryInfo? { fatalError("TODO(curation)") }
-    public static func language(_ code: String) -> LanguageInfo? { fatalError("TODO(curation)") }
+    public static var languages: [LanguageInfo] { WorldData.languages }
+    public static func country(_ code: String) -> CountryInfo? { WorldData.country(code) }
+    public static func language(_ code: String) -> LanguageInfo? { WorldData.language(code) }
     /// Display name for a region code ("LATAM" -> "Latin America", "EXYU" -> "Ex-Yugoslavia").
-    public static func regionName(_ code: String) -> String { fatalError("TODO(curation)") }
+    public static func regionName(_ code: String) -> String { WorldData.regionName(code) }
     /// Featured worlds shown first in onboarding (English, Türkiye, Deutschland, España, France, Italia, العربية ...).
-    public static var featured: [CountryInfo] { fatalError("TODO(curation)") }
+    public static var featured: [CountryInfo] { WorldData.featured }
 }
 
 /// Builds the curated catalog: parses every raw item, merges duplicates into Titles/Channels, scores variants,
@@ -106,6 +126,7 @@ public struct Curator: Sendable {
 
     public func curate(_ catalogs: [ProviderCatalog], verifiedQualities: [String: Int] = [:],
                        failingVariants: [String: Int] = [:]) -> CuratedCatalog {
-        fatalError("TODO(curation)")
+        CurationRun(preferences: preferences, verifiedQualities: verifiedQualities, failingVariants: failingVariants)
+            .run(catalogs)
     }
 }
