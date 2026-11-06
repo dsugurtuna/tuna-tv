@@ -1,0 +1,31 @@
+{
+ "info": {
+   "kinopoisk_url": "",
+   "tmdb_id": "603",
+   "name": "The Matrix",
+   "o_name": "The Matrix",
+   "cover_big": "https://image.tmdb.org/t/p/w600/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+   "movie_image": "https://image.tmdb.org/t/p/w600/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+   "releasedate": "1999-03-30",
+   "episode_run_time": 136,
+   "youtube_trailer": "vKQi3bBA1y8",
+   "director": "Lana Wachowski, Lilly Wachowski",
+   "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+   "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+   "description": "Set in the 22nd century...",
+   "plot": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents.",
+   "age": "",
+   "mpaa_rating": "R",
+   "rating_count_kinopoisk": 0,
+   "country": "United States of America",
+   "genre": "Action, Science Fiction",
+   "backdrop_path": ["https://image.tmdb.org/t/p/w1280/icmmSD4vTTDKOq2vvdulafOGw93.jpg", "", null],
+   "duration_secs": 8160,
+   "duration": "02:16:00",
+   "video": {"index": 0, "codec_name": "hevc", "codec_long_name": "H.265 / HEVC", "profile": "Main 10", "width": 3840, "height": 1608, "pix_fmt": "yuv420p10le"},
+   "audio": {"index": 1, "codec_name": "eac3", "channels": 6, "channel_layout": "5.1(side)", "sample_rate": "48000"},
+   "bitrate": 18234,
+   "rating": "8.2"
+ },
+ "movie_data": {"stream_id": 2001, "name": "EN| The Matrix (1999) 4K", "added": "1700000000", "category_id": "10", "container_extension": "mkv", "custom_sid": "", "direct_source": ""}
+}

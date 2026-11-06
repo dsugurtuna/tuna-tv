@@ -9,42 +9,69 @@ import Foundation
 public enum XtreamURLBuilder {
     /// Normalizes user input: trims, adds "http://" if missing, strips trailing "/", "player_api.php", "get.php",
     /// "xmltv.php", "panel_api.php" and query strings, KEEPS any sub-path ("http://host:8080/sub").
-    public static func normalizeServer(_ input: String) -> String? { fatalError("TODO(providers)") }
+    public static func normalizeServer(_ input: String) -> String? { XtreamURLKit.normalizeServer(input) }
 
     /// Parses a pasted full link ("http://host:8080/get.php?username=u&password=p&type=m3u_plus" or
     /// ".../player_api.php?username=u&password=p") into (server, username, password).
-    public static func parseFullLink(_ input: String) -> (server: String, username: String, password: String)? { fatalError("TODO(providers)") }
+    public static func parseFullLink(_ input: String) -> (server: String, username: String, password: String)? { XtreamURLKit.parseFullLink(input) }
 
     /// player_api.php URL; `action` nil = account info. Credentials percent-encoded.
-    public static func apiURL(server: String, username: String, password: String, action: String?, params: [String: String] = [:]) -> URL? { fatalError("TODO(providers)") }
+    public static func apiURL(server: String, username: String, password: String, action: String?, params: [String: String] = [:]) -> URL? {
+        XtreamURLKit.apiURL(server: server, username: username, password: password, action: action, params: params)
+    }
 
-    public static func xmltvURL(server: String, username: String, password: String) -> URL? { fatalError("TODO(providers)") }
+    public static func xmltvURL(server: String, username: String, password: String) -> URL? {
+        XtreamURLKit.xmltvURL(server: server, username: username, password: password)
+    }
 
     /// /live/u/p/<id>.<ts|m3u8>
-    public static func liveURL(server: String, username: String, password: String, streamID: String, format: String) -> URL? { fatalError("TODO(providers)") }
+    public static func liveURL(server: String, username: String, password: String, streamID: String, format: String) -> URL? {
+        XtreamURLKit.streamURL(kind: "live", server: server, username: username, password: password, id: streamID, ext: format, defaultExt: "ts")
+    }
 
     /// /movie/u/p/<id>.<ext>
-    public static func movieURL(server: String, username: String, password: String, streamID: String, ext: String) -> URL? { fatalError("TODO(providers)") }
+    public static func movieURL(server: String, username: String, password: String, streamID: String, ext: String) -> URL? {
+        XtreamURLKit.streamURL(kind: "movie", server: server, username: username, password: password, id: streamID, ext: ext, defaultExt: "mp4")
+    }
 
     /// /series/u/p/<episodeID>.<ext>
-    public static func episodeURL(server: String, username: String, password: String, episodeID: String, ext: String) -> URL? { fatalError("TODO(providers)") }
+    public static func episodeURL(server: String, username: String, password: String, episodeID: String, ext: String) -> URL? {
+        XtreamURLKit.streamURL(kind: "series", server: server, username: username, password: password, id: episodeID, ext: ext, defaultExt: "mp4")
+    }
 
     /// /timeshift/u/p/<durationMinutes>/<yyyy-MM-dd:HH-mm in server timezone>/<id>.ts
     public static func catchupURL(server: String, username: String, password: String, streamID: String, start: Date,
-                                  durationMinutes: Int, serverTimeZone: TimeZone) -> URL? { fatalError("TODO(providers)") }
+                                  durationMinutes: Int, serverTimeZone: TimeZone) -> URL? {
+        XtreamURLKit.catchupURL(server: server, username: username, password: password, streamID: streamID, start: start,
+                                durationMinutes: durationMinutes, serverTimeZone: serverTimeZone)
+    }
 }
 
 /// Tolerant decoding of Xtream JSON (numbers as strings, nulls, `false` for empty, dict-or-array episodes,
 /// base64 EPG titles). Pure functions over `Data`.
 public enum XtreamDecoder {
-    public static func account(_ data: Data) throws -> AccountInfo { fatalError("TODO(providers)") }
-    public static func categories(_ data: Data, kind: StreamKind) throws -> [RawCategory] { fatalError("TODO(providers)") }
+    public static func account(_ data: Data) throws -> AccountInfo { try XtreamDecodingKit.account(json: XtreamJSONKit.parse(data), now: Date()) }
+    public static func categories(_ data: Data, kind: StreamKind) throws -> [RawCategory] {
+        try XtreamDecodingKit.categories(json: XtreamJSONKit.parse(data), kind: kind)
+    }
     /// `get_live_streams` / `get_vod_streams` / `get_series` rows -> RawItem (kind .live / .movie / .series).
-    public static func items(_ data: Data, kind: StreamKind, providerID: ProviderID, categories: [String: String]) throws -> [RawItem] { fatalError("TODO(providers)") }
-    public static func vodInfo(_ data: Data) throws -> RawItemInfo { fatalError("TODO(providers)") }
-    public static func seriesInfo(_ data: Data, seriesRef: StreamRef) throws -> RawSeriesInfo { fatalError("TODO(providers)") }
+    public static func items(_ data: Data, kind: StreamKind, providerID: ProviderID, categories: [String: String]) throws -> [RawItem] {
+        try XtreamDecodingKit.items(json: XtreamJSONKit.parse(data), kind: kind, providerID: providerID, categories: categories)
+    }
+    public static func vodInfo(_ data: Data) throws -> RawItemInfo { try XtreamDecodingKit.vodInfo(json: XtreamJSONKit.parse(data)) }
+    public static func seriesInfo(_ data: Data, seriesRef: StreamRef) throws -> RawSeriesInfo {
+        try XtreamDecodingKit.seriesInfo(json: XtreamJSONKit.parse(data), seriesRef: seriesRef, now: Date())
+    }
     /// `get_short_epg` / `get_simple_data_table` -> programmes (titles/descriptions base64-decoded).
-    public static func shortEPG(_ data: Data, channelKey: String) throws -> [Program] { fatalError("TODO(providers)") }
+    public static func shortEPG(_ data: Data, channelKey: String) throws -> [Program] {
+        try shortEPG(data, channelKey: channelKey, serverTimeZone: nil)
+    }
+
+    /// Same; `start`/`end` wall-clock strings (used only when a listing has no Unix timestamps) are read in
+    /// `serverTimeZone` (`server_info.timezone`), UTC when nil.
+    public static func shortEPG(_ data: Data, channelKey: String, serverTimeZone: TimeZone?) throws -> [Program] {
+        try XtreamDecodingKit.shortEPG(json: XtreamJSONKit.parse(data), channelKey: channelKey, serverTimeZone: serverTimeZone)
+    }
 }
 
 /// One `#EXTINF` entry.
@@ -82,20 +109,26 @@ public struct M3UPlaylist: Sendable {
 
 public enum M3UParser {
     /// Handles BOM, CRLF, quoted attributes with commas, `#EXTGRP`, `#EXTVLCOPT`, `#KODIPROP`, very long lines.
-    public static func parse(_ data: Data) -> M3UPlaylist { fatalError("TODO(providers)") }
+    public static func parse(_ data: Data) -> M3UPlaylist { M3UParsingKit.parse(data) }
 
     /// Classifies entries into live / movie / series (Xtream-style URL paths `/movie/`, `/series/`, extensions,
     /// group names) and converts them to a catalog. Stream ids are stable hashes of the URL.
-    public static func catalog(from playlist: M3UPlaylist, providerID: ProviderID) -> ProviderCatalog { fatalError("TODO(providers)") }
+    public static func catalog(from playlist: M3UPlaylist, providerID: ProviderID) -> ProviderCatalog {
+        M3UParsingKit.classify(playlist, providerID: providerID).catalog
+    }
 }
 
 public enum XMLTVParser {
     /// Streaming parse (XMLParser SAX). Keeps only programmes whose channel is in `channels` (nil = all) and that
     /// overlap `window`. Handles `+0300` offsets and gzip-free input (the app gunzips first if needed).
-    public static func parse(_ data: Data, channels: Set<String>?, window: DateInterval) -> [Program] { fatalError("TODO(providers)") }
+    public static func parse(_ data: Data, channels: Set<String>?, window: DateInterval) -> [Program] {
+        XMLTVParsingKit.parse(data, channels: channels, window: window)
+    }
 
     /// Same, reading from a file URL in chunks (large guides).
-    public static func parse(fileURL: URL, channels: Set<String>?, window: DateInterval) -> [Program] { fatalError("TODO(providers)") }
+    public static func parse(fileURL: URL, channels: Set<String>?, window: DateInterval) -> [Program] {
+        XMLTVParsingKit.parse(fileURL: fileURL, channels: channels, window: window)
+    }
 }
 
 public enum SyncStage: String, Codable, Sendable, CaseIterable {
@@ -194,22 +227,12 @@ public actor ProviderSession {
     public func streamHeaders(for item: RawItem?) async -> [String: String] { await impl.streamHeaders(for: item) }
 }
 
-// MARK: - Implementation shell (owner: Providers). Replace the bodies; keep the signatures.
+// The implementation lives in ProviderSessionCore.swift (owner: Providers); parsers and decoders in the *Kit.swift files.
 
-final class ProviderSessionCore: @unchecked Sendable {
-    init(config: ProviderConfig, password: String, governor: RequestGovernor, cache: CacheStore, clock: TunaClock) {
-        fatalError("TODO(providers): implement ProviderSessionCore")
+public extension ProviderSession {
+    /// Prefix of every `CacheStore` key this provider's session writes ("providers/<id>/"). Remove it with
+    /// `CacheStore.removeAll(prefix:)` when the provider is deleted.
+    static func cacheKeyPrefix(for providerID: ProviderID) -> String {
+        ProviderCacheKeys(providerID: providerID).prefix
     }
-    func validate() async throws -> AccountInfo { fatalError("TODO(providers)") }
-    func account(refresh: Bool) async throws -> AccountInfo? { fatalError("TODO(providers)") }
-    func cachedCatalog() async -> ProviderCatalog? { fatalError("TODO(providers)") }
-    func isStale() async -> Bool { fatalError("TODO(providers)") }
-    func sync(force: Bool, progress: @escaping @Sendable (SyncProgress) -> Void) async throws -> ProviderCatalog { fatalError("TODO(providers)") }
-    func vodInfo(_ ref: StreamRef) async throws -> RawItemInfo { fatalError("TODO(providers)") }
-    func seriesInfo(_ ref: StreamRef) async throws -> RawSeriesInfo { fatalError("TODO(providers)") }
-    func shortEPG(_ ref: StreamRef, channelKey: String) async throws -> [Program] { fatalError("TODO(providers)") }
-    func guide(channels: Set<String>, window: DateInterval, force: Bool) async throws -> [Program] { fatalError("TODO(providers)") }
-    func streamURL(for ref: StreamRef, containerExtension: String?, directURL: String?) async -> URL? { fatalError("TODO(providers)") }
-    func catchupURL(for ref: StreamRef, program: Program) async -> URL? { fatalError("TODO(providers)") }
-    func streamHeaders(for item: RawItem?) async -> [String: String] { fatalError("TODO(providers)") }
 }

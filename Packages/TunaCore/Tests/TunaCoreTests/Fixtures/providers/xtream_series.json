@@ -1,0 +1,5 @@
+[
+{"num":1,"name":"EN| Breaking Bad","series_id":3001,"cover":"https://image.tmdb.org/t/p/w600/ggFHVNu6YYI5L9pCfOacjizRGt.jpg","plot":"A high school chemistry teacher diagnosed with cancer turns to crime.","cast":"Bryan Cranston, Aaron Paul","director":"Vince Gilligan","genre":"Drama / Crime","releaseDate":"2008-01-20","last_modified":"1700000300","rating":"9.5","rating_5based":"4.8","backdrop_path":["https://image.tmdb.org/t/p/w1280/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg"],"youtube_trailer":"HhesaQXLuRY","episode_run_time":"47","category_id":"20","tmdb":"1396"},
+{"num":2,"name":"TR| Kurtlar Vadisi","series_id":"3002","cover":"","plot":null,"cast":"","director":null,"genre":"Aksiyon","release_date":"2003-01-16","last_modified":"2023-10-01","rating":"0","rating_5based":3.9,"backdrop_path":"https://img.example.net/kv.jpg","youtube_trailer":"https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=10","episode_run_time":"","category_id":21},
+{"num":3,"name":"EN| Dark","series_id":3003,"cover":"http://img.example.net/dark.jpg","backdrop_path":[],"youtube_trailer":"","episode_run_time":"60 min","last_modified":0,"category_id":"20","tmdb_id":70523}
+]

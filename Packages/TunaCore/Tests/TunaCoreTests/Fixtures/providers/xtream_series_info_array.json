@@ -1,0 +1,13 @@
+{
+ "seasons": [],
+ "info": {"name":"Dark","cover":"http://img.example.net/dark.jpg","plot":"A family saga with a supernatural twist.","backdrop_path":"http://img.example.net/dark-bg.jpg","rating":"0","rating_5based":0},
+ "episodes": [
+   [
+     {"id":"50011","episode_num":1,"title":"Secrets","container_extension":"mp4","season":1,"info":{"duration":"51 min"}},
+     {"id":"50012","episode_num":2,"title":"Lies","container_extension":"mp4","season":1}
+   ],
+   [
+     {"id":"50021","episode_num":1,"title":"Beginnings and Endings","container_extension":"mkv","info":{"duration_secs":3300}}
+   ]
+ ]
+}

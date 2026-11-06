@@ -1,0 +1,49 @@
+{
+ "epg_listings": [
+  {
+   "id": "91",
+   "epg_id": "5",
+   "title": "QkJDIE5ld3MgYXQgU2l4",
+   "lang": "en",
+   "start": "2026-11-06 18:00:00",
+   "end": "2026-11-06 18:30:00",
+   "description": "VGhlIGxhdGVzdCBuYXRpb25hbCBhbmQgaW50ZXJuYXRpb25hbCBuZXdzLg==",
+   "channel_id": "BBCOne.uk",
+   "start_timestamp": "1793988000",
+   "stop_timestamp": "1793989800",
+   "now_playing": 0,
+   "has_archive": 1
+  },
+  {
+   "id": "92",
+   "epg_id": "5",
+   "title": "TElWRTogUHJlbWllciBMZWFndWUg4oCTIEFyc2VuYWwgdiBDaGVsc2Vh",
+   "lang": "en",
+   "start": "2026-11-06 18:30:00",
+   "end": "2026-11-06 20:30:00",
+   "description": "TGl2ZSBjb3ZlcmFnZSBmcm9tIHRoZSBFbWlyYXRlcy4=",
+   "channel_id": "BBCOne.uk",
+   "start_timestamp": 1793989800,
+   "stop_timestamp": "1793997000",
+   "now_playing": 0,
+   "has_archive": "0"
+  },
+  {
+   "id": "93",
+   "epg_id": "5",
+   "title": "Plain Title Not Base64",
+   "lang": "en",
+   "description": "",
+   "channel_id": "BBCOne.uk",
+   "start_timestamp": "1793997000",
+   "stop_timestamp": "1794000600"
+  },
+  {
+   "id": "94",
+   "epg_id": "5",
+   "title": "QnJva2VuIHRpbWVz",
+   "start_timestamp": "1794000600",
+   "stop_timestamp": "1794000600"
+  }
+ ]
+}

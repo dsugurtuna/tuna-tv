@@ -1,0 +1,26 @@
+{
+  "user_info": {
+    "username": "tuna_user",
+    "password": "s3cr3t+pass",
+    "message": "Welcome to StarStream!\r\nSupport: t.me/starstream",
+    "auth": 1,
+    "status": "Active",
+    "exp_date": "1924992000",
+    "is_trial": "0",
+    "active_cons": "0",
+    "created_at": "1699999999",
+    "max_connections": "2",
+    "allowed_output_formats": ["m3u8", "ts", "rtmp"]
+  },
+  "server_info": {
+    "url": "panel.example.com",
+    "port": "8080",
+    "https_port": "8443",
+    "server_protocol": "http",
+    "rtmp_port": "8880",
+    "timezone": "Europe/Istanbul",
+    "timestamp_now": 1762440000,
+    "time_now": "2025-11-06 17:40:00",
+    "process": true
+  }
+}

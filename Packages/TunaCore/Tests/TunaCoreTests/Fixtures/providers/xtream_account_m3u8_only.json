@@ -1,0 +1,4 @@
+{"user_info":{"username":"tuna_user","password":"s3cr3t+pass","message":"","auth":"1","status":"Active",
+"exp_date":null,"is_trial":true,"active_cons":1,"created_at":"","max_connections":1,"allowed_output_formats":["m3u8"]},
+"server_info":{"url":"panel.example.com","port":8080,"https_port":"","server_protocol":"http","rtmp_port":"",
+"timestamp_now":"1762440000","time_now":"2025-11-06 16:40:00"}}
