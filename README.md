@@ -50,11 +50,11 @@ Your IPTV subscription probably gives you 50,000 entries of chaos: `EN| The Matr
 | 📊 **Insights** | See your library decoded: duplicates merged, quality mix, languages, countries, genres, decades. |
 
 <p align="center">
-  <img src="docs/screenshots/06-detail-movie.png" alt="Title details" width="49%">
+  <img src="docs/screenshots/02-movies.png" alt="Movies" width="49%">
   <img src="docs/screenshots/04-live.png" alt="Live TV" width="49%">
 </p>
 <p align="center">
-  <img src="docs/screenshots/08-vault.png" alt="The Vault" width="49%">
+  <img src="docs/screenshots/10-search.png" alt="Search" width="49%">
   <img src="docs/screenshots/05-guide.png" alt="TV guide" width="49%">
 </p>
 
