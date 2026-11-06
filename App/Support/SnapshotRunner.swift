@@ -7,7 +7,6 @@ import TunaCore
 @MainActor
 enum SnapshotRunner {
     private static var windows: [NSWindow] = []
-    private static let mainSize = CGSize(width: 1600, height: 1000)
 
     private struct Shot {
         let name: String

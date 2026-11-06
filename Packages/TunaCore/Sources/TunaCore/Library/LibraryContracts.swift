@@ -52,26 +52,20 @@ public final class Library: @unchecked Sendable {
     public func genres(_ kind: TitleKind, metadata: [String: MediaMetadata]) -> [(genre: String, count: Int)] {
         index.genres(kind, metadata: metadata)
     }
+
+    // MARK: Additive API (owner: Library)
+
+    /// Like `titles(tmdbIDs:kind:)`, but also matches TMDB ids found later through metadata (`MediaMetadata.tmdbID`).
+    /// Results follow `tmdbIDs` order; for one id showcase titles come before Vault titles.
+    public func titles(tmdbIDs: [Int], kind: TitleKind?, metadata: [String: MediaMetadata]) -> [Title] {
+        index.titles(tmdbIDs: tmdbIDs, kind: kind, metadata: metadata)
+    }
+
+    /// Every title: movies, then series.
+    public var allTitles: [Title] { movies + series }
 }
 
-/// Internal index (owner: Library). Replace the bodies; keep the signatures.
-final class LibraryIndex: @unchecked Sendable {
-    init(catalog: CuratedCatalog) { fatalError("TODO(library)") }
-    func title(_ id: String) -> Title? { fatalError("TODO(library)") }
-    func channel(_ id: String) -> Channel? { fatalError("TODO(library)") }
-    func titles(tmdbIDs: [Int], kind: TitleKind?) -> [Title] { fatalError("TODO(library)") }
-    func variant(_ id: String) -> (title: Title?, channel: Channel?, variant: Variant)? { fatalError("TODO(library)") }
-    func showcase(_ kind: TitleKind) -> [Title] { fatalError("TODO(library)") }
-    var liveShowcase: [Channel] { fatalError("TODO(library)") }
-    func vault(_ shelf: VaultShelf, kind: TitleKind?) -> [Title] { fatalError("TODO(library)") }
-    func vaultChannels(_ shelf: VaultShelf) -> [Channel] { fatalError("TODO(library)") }
-    var vaultCounts: [VaultShelf: Int] { fatalError("TODO(library)") }
-    func otherLanguageGroups(kind: TitleKind?) -> [(language: String, titles: [Title])] { fatalError("TODO(library)") }
-    func channels(in category: ChannelCategory) -> [Channel] { fatalError("TODO(library)") }
-    var channelCategories: [(category: ChannelCategory, count: Int)] { fatalError("TODO(library)") }
-    var channelGroups: [(name: String, channels: [Channel])] { fatalError("TODO(library)") }
-    func genres(_ kind: TitleKind, metadata: [String: MediaMetadata]) -> [(genre: String, count: Int)] { fatalError("TODO(library)") }
-}
+// `LibraryIndex` (internal) lives in LibraryIndex.swift.
 
 // MARK: - Search
 
@@ -107,18 +101,39 @@ public struct SearchHit: Hashable, Sendable, Identifiable {
 /// Instant search over titles (names, original titles, cast, directors, keywords from metadata), channels and
 /// current/upcoming programmes. Typo-tolerant prefix matching on folded tokens. < 15 ms for 150k items.
 public final class SearchIndex: @unchecked Sendable {
-    public init(library: Library, metadata: [String: MediaMetadata], guide: Guide?) { fatalError("TODO(library)") }
+    public init(library: Library, metadata: [String: MediaMetadata], guide: Guide?) {
+        engine = SearchEngine(library: library, metadata: metadata, guide: guide, includeAdult: false, now: Date())
+    }
+
+    /// Additive: `includeAdult` indexes adult titles/channels (only after the PIN unlock); `now` picks the guide's
+    /// current/next programmes and the ranking reference date.
+    public init(library: Library, metadata: [String: MediaMetadata], guide: Guide?, includeAdult: Bool, now: Date = Date()) {
+        engine = SearchEngine(library: library, metadata: metadata, guide: guide, includeAdult: includeAdult, now: now)
+    }
+
+    private let engine: SearchEngine
+
     /// `scope` nil = everything. Showcase results rank above Vault results.
-    public func search(_ query: String, scope: TitleKind? = nil, includeChannels: Bool = true, limit: Int = 60) -> [SearchHit] { fatalError("TODO(library)") }
+    public func search(_ query: String, scope: TitleKind? = nil, includeChannels: Bool = true, limit: Int = 60) -> [SearchHit] {
+        engine.search(query, scope: scope, includeChannels: includeChannels, limit: limit)
+    }
 }
 
 // MARK: - Ranking & rails
 
 public enum Ranker {
     /// Bayesian weighted rating: (v/(v+m))·R + (m/(v+m))·C. Defaults m = 500, C = 6.8.
-    public static func weightedRating(average: Double, votes: Int, m: Double = 500, c: Double = 6.8) -> Double { fatalError("TODO(library)") }
+    public static func weightedRating(average: Double, votes: Int, m: Double = 500, c: Double = 6.8) -> Double {
+        let v = Double(max(0, votes))
+        guard v + m > 0 else { return c }
+        return (v / (v + m)) * average + (m / (v + m)) * c
+    }
     /// Overall score used for "Top" rails: weighted rating, popularity (log), recency, quality bonus, provider rating.
-    public static func score(_ title: Title, metadata: MediaMetadata?, now: Date) -> Double { fatalError("TODO(library)") }
+    /// 0.55·(WR/10) + 0.20·log-popularity + 0.10·recency + 0.10·quality + 0.05·(provider rating/10); without
+    /// metadata the provider rating stands in for the weighted rating (see `RankMath`).
+    public static func score(_ title: Title, metadata: MediaMetadata?, now: Date) -> Double {
+        RankMath.score(title, metadata: metadata, now: now)
+    }
 }
 
 public enum RailStyle: String, Codable, Sendable, Hashable {
@@ -198,15 +213,21 @@ public enum RailComposer {
     /// Home: hero (6 featured), Continue Watching, Top 10 Movies, Top 10 Series, Live Now, Trending This Week,
     /// New Arrivals, Ultra HD Showcase, Because You Watched X (×2), Critically Acclaimed, Hidden Gems,
     /// per-world rails ("From Türkiye"), genre rails (top 6 genres), Collections.
-    public static func home(_ context: RailContext) -> [Rail] { fatalError("TODO(library)") }
+    public static func home(_ context: RailContext) -> [Rail] { RailEngine(context).home() }
     /// Movies page / Series page rails (same ideas, kind-filtered, more genres + decades).
-    public static func browse(_ kind: TitleKind, _ context: RailContext) -> [Rail] { fatalError("TODO(library)") }
+    public static func browse(_ kind: TitleKind, _ context: RailContext) -> [Rail] { RailEngine(context).browse(kind) }
     /// "More like this" for a title (TMDB recommendations ∩ catalog, then same genres/keywords).
-    public static func similar(to title: Title, _ context: RailContext, limit: Int = 18) -> [Title] { fatalError("TODO(library)") }
+    public static func similar(to title: Title, _ context: RailContext, limit: Int = 18) -> [Title] {
+        RailEngine(context).similar(to: title, limit: limit)
+    }
     /// Titles credited to a person (by TMDB credits) available in the catalog.
-    public static func titles(for person: PersonDetails, _ context: RailContext) -> [Title] { fatalError("TODO(library)") }
+    public static func titles(for person: PersonDetails, _ context: RailContext) -> [Title] {
+        RailEngine(context).titles(for: person)
+    }
     /// Sorted, filtered grid contents for "See all" / browse pages.
-    public static func grid(_ kind: TitleKind?, filter: BrowseFilter, _ context: RailContext) -> [Title] { fatalError("TODO(library)") }
+    public static func grid(_ kind: TitleKind?, filter: BrowseFilter, _ context: RailContext) -> [Title] {
+        RailEngine(context).grid(kind, filter: filter)
+    }
 }
 
 public struct BrowseFilter: Hashable, Sendable {
@@ -240,21 +261,33 @@ public struct BrowseFilter: Hashable, Sendable {
 
 /// Programme index for live channels (from XMLTV / short EPG / demo).
 public final class Guide: @unchecked Sendable {
-    public init(programs: [Program]) { fatalError("TODO(library)") }
+    /// Programmes are deduplicated by `Program.id` (the later one wins) and sorted per channel key.
+    public init(programs: [Program]) { storage = GuideStorage(programs: programs) }
     public static let empty = Guide(programs: [])
-    public var channelKeys: Set<String> { fatalError("TODO(library)") }
-    public func now(_ channelKey: String, at date: Date) -> Program? { fatalError("TODO(library)") }
-    public func next(_ channelKey: String, after date: Date) -> Program? { fatalError("TODO(library)") }
-    public func programs(_ channelKey: String, in interval: DateInterval) -> [Program] { fatalError("TODO(library)") }
+    private let storage: GuideStorage
+    public var channelKeys: Set<String> { storage.channelKeys }
+    /// The programme airing at `date` (the latest-starting one when programmes overlap).
+    public func now(_ channelKey: String, at date: Date) -> Program? { storage.now(channelKey, at: date) }
+    /// The first programme starting strictly after `date`.
+    public func next(_ channelKey: String, after date: Date) -> Program? { storage.next(channelKey, after: date) }
+    /// Programmes overlapping `interval`, by start.
+    public func programs(_ channelKey: String, in interval: DateInterval) -> [Program] { storage.programs(channelKey, in: interval) }
     /// Live events happening now across channels (sports matches, breaking news, premieres), best first.
-    public func liveEvents(at date: Date, channels: [Channel]) -> [(channel: Channel, program: Program)] { fatalError("TODO(library)") }
-    public func merging(_ programs: [Program]) -> Guide { fatalError("TODO(library)") }
+    /// Uses each channel's `epgChannelID` (falling back to `iptvOrgID`); live sports first, then by start.
+    public func liveEvents(at date: Date, channels: [Channel]) -> [(channel: Channel, program: Program)] {
+        storage.liveEvents(at: date, channels: channels)
+    }
+    /// A new guide with `programs` added; programmes with the same id replace the existing ones.
+    public func merging(_ programs: [Program]) -> Guide { Guide(programs: storage.allPrograms + programs) }
+    /// Additive: every programme, grouped by channel key and sorted by start.
+    public var allPrograms: [Program] { storage.allPrograms }
 }
 
 public enum LiveEventDetector {
     /// Heuristics on title/categories: " vs ", " v ", "LIVE", "Live:", league names, "Final", "Grand Prix", "🔴".
-    public static func isLiveEvent(_ program: Program) -> Bool { fatalError("TODO(library)") }
-    public static func sportsKind(_ program: Program) -> String? { fatalError("TODO(library)") }
+    public static func isLiveEvent(_ program: Program) -> Bool { LiveEventRules.isLiveEvent(program) }
+    /// "Football", "Basketball", "American Football", "Ice Hockey", "Baseball", "Motorsport", "Tennis", "Fighting" or nil.
+    public static func sportsKind(_ program: Program) -> String? { LiveEventRules.sportsKind(program) }
 }
 
 // MARK: - Insights
@@ -298,6 +331,6 @@ public struct InsightsReport: Sendable, Hashable {
     }
 
     public static func build(library: Library, metadata: [String: MediaMetadata], userState: UserState) -> InsightsReport {
-        fatalError("TODO(library)")
+        InsightsBuilder.build(library: library, metadata: metadata, userState: userState)
     }
 }

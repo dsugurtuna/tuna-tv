@@ -33,7 +33,11 @@ struct PersonView: View {
         }
         .task(id: personID) {
             didLoad = false
-            person = personID > 0 ? await model.person(id: personID) : nil
+            if personID > 0 {
+                person = await model.person(id: personID)
+            } else {
+                person = nil
+            }
             didLoad = true
         }
     }
