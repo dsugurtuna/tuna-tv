@@ -62,11 +62,6 @@ jobs:
           xcodebuild -resolvePackageDependencies -project TunaTV.xcodeproj -scheme TunaTV \
             -clonedSourcePackagesDirPath "$SPM_DIR" -skipPackagePluginValidation -skipMacroValidation | tail -20
 
-      - name: TunaCore tests (macOS)
-        run: |
-          set -o pipefail
-          swift test --package-path Packages/TunaCore 2>&1 | tail -60
-
       - name: Type-check app (no engine, fast)
         run: |
           set -o pipefail
@@ -85,10 +80,15 @@ jobs:
             CODE_SIGN_IDENTITY=- COMPILER_INDEX_STORE_ENABLE=NO \
             2>&1 | tee build.log | xcbeautify --quiet --renderer github-actions
 
+      - name: TunaCore tests (macOS)
+        run: |
+          set -o pipefail
+          swift test --package-path Packages/TunaCore 2>&1 | tee coretests.log | grep -E "error:|failed|Executed .* tests" | tail -80
+
       - name: Compiler errors (if any)
         if: failure()
         run: |
-          for f in check.log build.log; do
+          for f in check.log build.log coretests.log; do
             [ -f "$f" ] || continue
             echo "==== ERRORS in $f ===="
             grep -E "(error|fatal error):" "$f" | sort -u | head -300 || true
