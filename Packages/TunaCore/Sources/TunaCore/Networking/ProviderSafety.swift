@@ -124,6 +124,18 @@ public struct GovernorSnapshot: Codable, Hashable, Sendable {
 /// 6. Daily counter resets at local midnight; past `dailySoftBudget` background calls throw `.budgetExhausted`.
 /// 7. Breaker state and daily counter persist across launches through `persistence` (so relaunching the app
 ///    does not reset a cooldown).
+///
+/// Details of the implementation (GovernorCore.swift):
+/// - Thrown errors: `.paused(until:reason:)` while the breaker is open AND for the response that opened it;
+///   `.unauthorized` for a 401/403 and for every call until `resetBreaker()`; `.budgetExhausted`; `.cancelled`
+///   when the calling task is cancelled (a cancelled caller that is still queued is removed from the queue);
+///   transport failures as `.network`. Every other HTTP status is RETURNED as an `HTTPResponse` for the caller.
+/// - Any 4xx/5xx carrying a positive `Retry-After` also opens the breaker (the server asked us to back off).
+/// - When the breaker opens, every queued request fails immediately with the same error.
+/// - After a pause ends (or after `resetBreaker()`), the next request is a probe: one more 5xx / network error
+///   re-opens the breaker at the next escalation step. 24 h without a trip resets the escalation.
+/// - The request log keeps the last 200 network requests (oldest first) with credential-free summaries
+///   (`RequestRedaction`). Refused calls (paused / budget) never reach the network and are not logged.
 public actor RequestGovernor {
     public let providerID: ProviderID
     public private(set) var policy: GovernorPolicy
@@ -152,6 +164,18 @@ public actor RequestGovernor {
         self.policy = policy
         await impl.updatePolicy(policy)
     }
+
+    /// Opens the breaker for a problem only the caller can see in an otherwise successful response, e.g.
+    /// `user_info.auth == 0`, an account status of "Banned"/"Disabled"/"Expired", or repeated unexpected empty
+    /// lists (a classic soft-throttle signal). `authBlocked: true` blocks the account until `resetBreaker()`;
+    /// otherwise the next pause of the escalation schedule starts (a pause already running is not extended).
+    /// Everything still queued fails immediately.
+    public func tripBreaker(reason: String, authBlocked: Bool = false) async {
+        await impl.tripBreaker(reason: reason, authBlocked: authBlocked)
+    }
+
+    /// Callers currently waiting for a response (queued or sharing the in-flight request). Diagnostics and tests.
+    func waitingCallers() async -> Int { await impl.waitingCallers() }
 }
 
 /// Persists breaker + budget state per provider.
@@ -163,9 +187,13 @@ public protocol GovernorPersistence: Sendable {
 public struct GovernorPersistedState: Codable, Hashable, Sendable {
     public var breaker: BreakerState
     public var tripCount: Int
+    /// Local day ("yyyy-MM-dd") that `requestsToday` counts.
     public var dayStamp: String
     public var requestsToday: Int
+    /// Start of the most recent request (spacing survives a relaunch).
     public var lastRequestAt: Date?
+    /// When the breaker last tripped; 24 h without a trip resets the escalation. Optional so older files decode.
+    public var lastTripAt: Date?
 
     public init(breaker: BreakerState = .closed, tripCount: Int = 0, dayStamp: String = "", requestsToday: Int = 0, lastRequestAt: Date? = nil) {
         self.breaker = breaker
@@ -173,6 +201,7 @@ public struct GovernorPersistedState: Codable, Hashable, Sendable {
         self.dayStamp = dayStamp
         self.requestsToday = requestsToday
         self.lastRequestAt = lastRequestAt
+        self.lastTripAt = nil
     }
 }
 
@@ -204,6 +233,13 @@ public actor HostLimiter {
     }
 
     public func setRule(_ rule: Rule, for host: String) async { await impl.setRule(rule, for: host) }
+
+    /// The rule that applies to `host` (exact host key, case-insensitive; the default rule otherwise).
+    public func rule(for host: String) async -> Rule { await impl.rule(for: host) }
+
+    /// Operations running / callers waiting for a slot on `host`. Diagnostics and tests.
+    func activeCount(for host: String) async -> Int { await impl.activeCount(for: host) }
+    func waitingCount(for host: String) async -> Int { await impl.waitingCount(for: host) }
 
     /// Default rules: api.themoviedb.org 8 concurrent / 25 ms; image.tmdb.org 6 / 0; api.tvmaze.com 1 / 0.55 s;
     /// www.omdbapi.com 2 / 0.2 s; everything else 4 / 50 ms.
@@ -242,6 +278,16 @@ public struct StreamTicket: Hashable, Sendable, Identifiable {
 /// 3. A new open waits until `releaseGrace` (1.5 s) has passed since the previous ticket of that provider closed,
 ///    and `minOpenSpacing` (1.5 s) since the previous open started.
 /// 4. At most `maxOpensPerMinute` (8) opens per provider per rolling minute; beyond that `.streamRateLimited`.
+///
+/// Details of the implementation (StreamGateCore.swift):
+/// - Opens of one provider are handled one at a time, in arrival order. The per-minute check runs FIRST, so an
+///   open that would be refused never stops the stream that is playing; its `retryAfter` is the time until the
+///   oldest counted open leaves the window. A refused open because of the cap reports `retryAfter` =
+///   max(releaseGrace, minOpenSpacing).
+/// - Preemption needs a registered handler (without one, `open` throws `.streamRateLimited`). The handler gets the
+///   OLDEST open ticket of that provider and must lead to `close(ticket)` (it must not call `open` itself). The
+///   open waits for that close without a timeout; cancel the opening task to give up (`TunaError.cancelled`).
+/// - `close` of an unknown or already closed ticket is ignored.
 public actor StreamGate {
     public init(releaseGrace: TimeInterval = 1.5, minOpenSpacing: TimeInterval = 1.5, maxOpensPerMinute: Int = 8,
                 clock: TunaClock = SystemClock()) {
@@ -267,36 +313,5 @@ public actor StreamGate {
     public func openTickets() async -> [StreamTicket] { await impl.openTickets() }
 }
 
-// MARK: - Implementation shells (owner: Networking). Replace the bodies; keep the method signatures.
-
-final class GovernorCore: @unchecked Sendable {
-    init(providerID: ProviderID, policy: GovernorPolicy, client: HTTPClient, clock: TunaClock,
-         persistence: GovernorPersistence?, random: @escaping @Sendable () -> Double) {
-        fatalError("TODO(networking): implement GovernorCore")
-    }
-    func perform(_ request: HTTPRequest, priority: RequestPriority, purpose: String) async throws -> HTTPResponse {
-        fatalError("TODO(networking)")
-    }
-    func snapshot() async -> GovernorSnapshot { fatalError("TODO(networking)") }
-    func resetBreaker() async { fatalError("TODO(networking)") }
-    func updatePolicy(_ policy: GovernorPolicy) async { fatalError("TODO(networking)") }
-}
-
-final class HostLimiterCore: @unchecked Sendable {
-    init(defaultRule: HostLimiter.Rule, rules: [String: HostLimiter.Rule], clock: TunaClock) {
-        fatalError("TODO(networking): implement HostLimiterCore")
-    }
-    func run<T: Sendable>(host: String, _ operation: @Sendable () async throws -> T) async throws -> T { fatalError("TODO(networking)") }
-    func setRule(_ rule: HostLimiter.Rule, for host: String) async { fatalError("TODO(networking)") }
-}
-
-final class StreamGateCore: @unchecked Sendable {
-    init(releaseGrace: TimeInterval, minOpenSpacing: TimeInterval, maxOpensPerMinute: Int, clock: TunaClock) {
-        fatalError("TODO(networking): implement StreamGateCore")
-    }
-    func setMaxStreams(_ count: Int, for providerID: ProviderID) async { fatalError("TODO(networking)") }
-    func setPreemptHandler(_ handler: @escaping @Sendable (StreamTicket) async -> Void) async { fatalError("TODO(networking)") }
-    func open(_ ref: StreamRef, preempt: Bool) async throws -> StreamTicket { fatalError("TODO(networking)") }
-    func close(_ ticket: StreamTicket) async { fatalError("TODO(networking)") }
-    func openTickets() async -> [StreamTicket] { fatalError("TODO(networking)") }
-}
+// MARK: - Implementations (owner: Networking)
+// GovernorCore.swift, HostLimiterCore.swift and StreamGateCore.swift hold the actors behind the three public types.
