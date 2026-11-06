@@ -1,0 +1,18 @@
+# Xcode / SwiftPM
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcodeproj/
+!*.xcodeproj/project.xcworkspace/
+xcuserdata/
+*.xcuserstate
+Packages/*/.build/
+Packages/*/Package.resolved
+# Generated
+dist/
+snapshots/
+*.dmg
+*.zip
+# macOS
+.DS_Store
