@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: io.github.dsugurtuna
   deploymentTarget:
     macOS: "15.0"
+    tvOS: "18.0"
   createIntermediateGroups: true
   developmentLanguage: en
   groupSortPosition: top
@@ -14,7 +15,6 @@ settings:
     MACOSX_DEPLOYMENT_TARGET: "15.0"
     SWIFT_VERSION: "5.0"
     SWIFT_STRICT_CONCURRENCY: minimal
-    ARCHS: arm64
     ONLY_ACTIVE_ARCH: NO
     DEAD_CODE_STRIPPING: YES
     ENABLE_USER_SCRIPT_SANDBOXING: NO
@@ -60,6 +60,7 @@ targets:
       base:
         PRODUCT_NAME: Tuna TV
         PRODUCT_MODULE_NAME: TunaTV
+        ARCHS: arm64
         PRODUCT_BUNDLE_IDENTIFIER: io.github.dsugurtuna.tunatv
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
@@ -84,6 +85,7 @@ targets:
     settings:
       base:
         PRODUCT_NAME: TunaTVCheck
+        ARCHS: arm64
         PRODUCT_MODULE_NAME: TunaTV
         PRODUCT_BUNDLE_IDENTIFIER: io.github.dsugurtuna.tunatv.check
         INFOPLIST_FILE: App/Info.plist
@@ -94,6 +96,42 @@ targets:
         DEVELOPMENT_TEAM: ""
         ENABLE_HARDENED_RUNTIME: NO
 
+  # Apple TV app: same TunaCore + AetherEngine, focus-driven UI in TVApp/.
+  TunaTV-tvOS:
+    type: application
+    platform: tvOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: TVApp
+    dependencies:
+      - package: TunaCore
+        product: TunaCore
+      - package: AetherEngine
+        product: AetherEngine
+    info:
+      path: TVApp/Info.plist
+      properties:
+        CFBundleDisplayName: Tuna TV
+        CFBundleName: Tuna TV
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UIRequiredDeviceCapabilities: [arm64]
+        UIUserInterfaceStyle: Dark
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        NSLocalNetworkUsageDescription: "Tuna TV plays streams from your IPTV provider."
+    settings:
+      base:
+        PRODUCT_NAME: Tuna TV
+        PRODUCT_MODULE_NAME: TunaTVtvOS
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.dsugurtuna.tunatv.tv
+        TARGETED_DEVICE_FAMILY: "3"
+        ASSETCATALOG_COMPILER_APPICON_NAME: App Icon & Top Shelf Image
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) TUNA_ENGINE"
+
 schemes:
   TunaTV:
     build:
@@ -103,6 +141,12 @@ schemes:
       config: Debug
     archive:
       config: Release
+  TunaTV-tvOS:
+    build:
+      targets:
+        TunaTV-tvOS: all
+    run:
+      config: Debug
   TunaTVCheck:
     build:
       targets:

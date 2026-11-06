@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "TunaCore",
-    platforms: [.macOS("15.0")],
+    platforms: [.macOS("15.0"), .tvOS("18.0")],
     products: [
         .library(name: "TunaCore", targets: ["TunaCore"]),
     ],
