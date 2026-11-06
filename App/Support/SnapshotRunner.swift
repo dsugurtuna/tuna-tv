@@ -36,6 +36,8 @@ enum SnapshotRunner {
         }
         let model = AppModel(environment: .snapshot)
         await model.startDemo()
+        model.router.animationsEnabled = false
+        model.updateSettings { $0.reduceMotion = true }
         print("Demo loaded: \(model.library.movies.count) movies, \(model.library.series.count) series, "
               + "\(model.library.channels.count) channels")
         for shot in shots(for: model) {

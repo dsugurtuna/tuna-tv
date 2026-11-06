@@ -77,15 +77,17 @@ final class Router {
     private(set) var stack: [Route] = []
     var isSearchPresented = false
     var isSettingsPresented = false
+    /// Off for CI snapshots: offscreen windows never advance animations, so transitions would freeze mid-way.
+    var animationsEnabled = true
 
     var top: Route? { stack.last }
 
     func select(_ section: AppSection) {
         if self.section == section, !stack.isEmpty {
-            withAnimation(Tuna.Motion.page) { stack.removeAll() }
+            withAnimation(animationsEnabled ? Tuna.Motion.page : nil) { stack.removeAll() }
             return
         }
-        withAnimation(Tuna.Motion.page) {
+        withAnimation(animationsEnabled ? Tuna.Motion.page : nil) {
             stack.removeAll()
             self.section = section
         }
@@ -93,15 +95,15 @@ final class Router {
 
     func open(_ route: Route) {
         if stack.last == route { return }
-        withAnimation(Tuna.Motion.page) { stack.append(route) }
+        withAnimation(animationsEnabled ? Tuna.Motion.page : nil) { stack.append(route) }
     }
 
     func back() {
         guard !stack.isEmpty else { return }
-        withAnimation(Tuna.Motion.page) { _ = stack.removeLast() }
+        withAnimation(animationsEnabled ? Tuna.Motion.page : nil) { _ = stack.removeLast() }
     }
 
     func popToRoot() {
-        withAnimation(Tuna.Motion.page) { stack.removeAll() }
+        withAnimation(animationsEnabled ? Tuna.Motion.page : nil) { stack.removeAll() }
     }
 }

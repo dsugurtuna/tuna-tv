@@ -101,6 +101,9 @@ struct RootView: View {
         .background(Tuna.Palette.background)
         .ignoresSafeArea()
         .preferredColorScheme(.dark)
+        .transaction { transaction in
+            if !model.router.animationsEnabled { transaction.animation = nil; transaction.disablesAnimations = true }
+        }
         .animation(reduceMotion ? .easeInOut(duration: 0.2) : Tuna.Motion.page, value: router.section)
         .animation(reduceMotion ? .easeInOut(duration: 0.2) : Tuna.Motion.page, value: playerPresented)
         .animation(Tuna.Motion.snappy, value: router.isSearchPresented)
