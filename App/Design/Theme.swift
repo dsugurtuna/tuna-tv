@@ -215,23 +215,45 @@ extension Color {
     }
 }
 
+/// How render-server-only effects are drawn.
+enum DSRenderMode {
+    /// True in offscreen CI snapshot runs: glass/backdrop effects are replaced by static fills there.
+    static let staticGlass: Bool = AppLaunchOptions.isSnapshotRun
+}
+
 extension View {
     /// Glass panel: Liquid Glass on macOS 26 (when built with the macOS 26 SDK), material elsewhere.
+    /// Offscreen snapshot runs (`--snapshots`) get a static, fully drawn panel instead: `cacheDisplay` cannot
+    /// capture Liquid Glass / backdrop layers, and a tinted glass panel made everything drawn beneath it in the
+    /// window (hero, text, page background) come out transparent in the PNG.
     @ViewBuilder
     func tunaGlass(cornerRadius: CGFloat = 18, tint: Color? = nil) -> some View {
-        #if compiler(>=6.2)
-        if #available(macOS 26.0, *) {
-            if let tint {
-                self.glassEffect(.regular.tint(tint.opacity(0.35)), in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
-            } else {
-                self.glassEffect(.regular, in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
-            }
+        if DSRenderMode.staticGlass {
+            self.tunaStaticPanel(cornerRadius: cornerRadius, tint: tint)
         } else {
+            #if compiler(>=6.2)
+            if #available(macOS 26.0, *) {
+                if let tint {
+                    self.glassEffect(.regular.tint(tint.opacity(0.35)), in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+                } else {
+                    self.glassEffect(.regular, in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+                }
+            } else {
+                self.tunaMaterialPanel(cornerRadius: cornerRadius, tint: tint)
+            }
+            #else
             self.tunaMaterialPanel(cornerRadius: cornerRadius, tint: tint)
+            #endif
         }
-        #else
-        self.tunaMaterialPanel(cornerRadius: cornerRadius, tint: tint)
-        #endif
+    }
+
+    /// Material-free look-alike of the glass panel (plain fills only), for offscreen rendering.
+    func tunaStaticPanel(cornerRadius: CGFloat, tint: Color?) -> some View {
+        let shape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+        return self
+            .background((tint ?? .clear).opacity(0.22), in: shape)
+            .background(Tuna.Palette.surfaceElevated.opacity(0.72), in: shape)
+            .overlay(shape.strokeBorder(Tuna.Palette.strokeStrong, lineWidth: 1))
     }
 
     func tunaMaterialPanel(cornerRadius: CGFloat, tint: Color?) -> some View {

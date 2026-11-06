@@ -217,7 +217,22 @@ struct VaultBoxIllustration: View {
         .position(x: 160, y: 204)
     }
 
+    /// Animated: perspective swing. Reduced motion (and offscreen snapshots): the same pose as a flat 2D projection
+    /// (y × cos 112°), so no 3D-transformed layer is needed for a lid that never moves.
+    @ViewBuilder
     private var lid: some View {
+        if animated {
+            lidShape
+                .rotation3DEffect(.degrees(isOpen ? -112 : 0), axis: (x: 1, y: 0, z: 0), anchor: .top, perspective: 0.5)
+                .position(x: 160, y: 118 + 20)
+        } else {
+            lidShape
+                .scaleEffect(x: 1, y: isOpen ? CGFloat(cos(112 * Double.pi / 180)) : 1, anchor: .top)
+                .position(x: 160, y: 118 + 20)
+        }
+    }
+
+    private var lidShape: some View {
         ZStack(alignment: .bottom) {
             Path { path in
                 path.move(to: CGPoint(x: 12, y: 0))
@@ -232,8 +247,6 @@ struct VaultBoxIllustration: View {
                 .frame(width: 194, height: 10)
         }
         .frame(width: 194, height: 40)
-        .rotation3DEffect(.degrees(isOpen ? -112 : 0), axis: (x: 1, y: 0, z: 0), anchor: .top, perspective: 0.5)
-        .position(x: 160, y: 118 + 20)
     }
 }
 
